@@ -1,0 +1,74 @@
+.Réservia
+{
+    max-width: 25%;
+	height: auto;
+}
+
+header
+{
+    display:flex;  /* aligner tous les éléments du header sur la même ligne*/
+    justify-content: space-between;  /* espacer Réservia des autres éléments de la même ligne*/
+    background-color: rgb(158, 158, 214);
+    margin-bottom: 2%;
+}    
+
+@font-face 
+{
+    font-family: raleway;
+    src: url(C:\Users\mosta\Documents\static\Raleway-Medium);
+}
+
+.Sinscrire
+{
+    color: #0065FC;
+    padding: 1em;
+}
+
+.Activités  /* Agrandir l'espace à l'intérieur de l'élément*/
+{
+    padding: 1em;
+}
+
+.Hébergements /* Agrandir l'espace à l'intérieur de l'élément*/
+{
+    padding: 1em;
+}
+
+.Sinscrire:hover  /* Apparence au survol des liens */
+{
+    text-decoration:overline;
+    color:#0065FC;
+}
+
+.Activités:hover  /* Apparence au survol des liens */
+{
+    text-decoration:overline;
+    color:#0065FC;
+}
+
+.Hébergements:hover /* Apparence au survol des liens */
+{
+    text-decoration:overline;
+    color:#0065FC;
+}
+
+h1
+{
+    font-size: 120%;
+    margin-top: auto;
+    padding-bottom: 0%;
+    margin-bottom: 0%;
+    
+}
+
+h2
+{
+    font-size: 90%;
+    margin-top: 0%;
+    padding-top: 0%;
+    background-color: aqua;
+    margin-bottom: 0%; /*pas d'espace entre  h2 et H3*/
+    font-weight: normal;
+}
+
+

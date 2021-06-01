@@ -1,74 +1,85 @@
-.Réservia
-{
-    max-width: 25%;
-	height: auto;
+@font-face {
+    font-family: 'raleway';
+    src: url('Raleway-Black.ttf');
 }
 
-header
+body
 {
-    display:flex;  /* aligner tous les éléments du header sur la même ligne*/
-    justify-content: space-between;  /* espacer Réservia des autres éléments de la même ligne*/
-    background-color: rgb(158, 158, 214);
-    margin-bottom: 2%;
-}    
-
-@font-face 
-{
-    font-family: raleway;
-    src: url(C:\Users\mosta\Documents\static\Raleway-Medium);
-}
-
-.Sinscrire
-{
-    color: #0065FC;
-    padding: 1em;
-}
-
-.Activités  /* Agrandir l'espace à l'intérieur de l'élément*/
-{
-    padding: 1em;
-}
-
-.Hébergements /* Agrandir l'espace à l'intérieur de l'élément*/
-{
-    padding: 1em;
-}
-
-.Sinscrire:hover  /* Apparence au survol des liens */
-{
-    text-decoration:overline;
-    color:#0065FC;
-}
-
-.Activités:hover  /* Apparence au survol des liens */
-{
-    text-decoration:overline;
-    color:#0065FC;
-}
-
-.Hébergements:hover /* Apparence au survol des liens */
-{
-    text-decoration:overline;
-    color:#0065FC;
-}
-
-h1
-{
-    font-size: 120%;
-    margin-top: auto;
-    padding-bottom: 0%;
-    margin-bottom: 0%;
+   font-family: raleway, sans-serif;
+   margin: 0%;
     
 }
 
-h2
+/*header*/
+
+
+header
 {
-    font-size: 90%;
-    margin-top: 0%;
-    padding-top: 0%;
     background-color: aqua;
-    margin-bottom: 0%; /*pas d'espace entre  h2 et H3*/
-    font-weight: normal;
+    border: black;
+
+
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+nav img {
+    height: 40px;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    margin-left: auto;
+    margin-right: 15px;
+}
+
+.hebergements{
+    padding-right: 10px;
 }
 
 
+
+
+
+.inscription{
+    text-align: right;
+    margin-top: 15px;
+    color: #0065FC;
+    font-weight: bold;
+     
+}
+
+
+
+a:hover{
+    text-decoration: overline;
+    color: #0065FC;
+}
+
+@media screen and (max-width: 550px) {
+
+header {
+    width: max-content;
+}
+    
+nav{
+    position: absolute;
+    width: max-content;
+    
+}
+        
+nav ul {
+        
+        margin-top: 70px;
+        
+    }
+
+.inscription {
+    text-align: right;
+}
+
+}

@@ -15,7 +15,6 @@ body
 
 header
 {
-    background-color: aqua;
     border: black;
 
 
@@ -64,10 +63,10 @@ a:hover{
 
 header {
     width: max-content;
+
 }
     
 nav{
-    position: absolute;
     width: max-content;
     
 }
@@ -76,10 +75,57 @@ nav ul {
         
         margin-top: 70px;
         
+        
     }
 
 .inscription {
     text-align: right;
 }
 
+}
+
+
+h1{
+    font-size: 20px;
+    margin-bottom: 0px;
+   
+}
+
+.sous-titre{
+    font-size: 14px;
+}
+
+
+
+.recherche{
+    display: flex;
+    margin-top: 20px;
+    height: 30px;
+    
+
+
+}
+.fas{
+    background-color: #F2F2F2;
+    width: 20px;
+    padding-left: 5px;
+    padding-top: 5px;
+    
+}
+
+
+.cliquer-rechercher{
+    border-radius: 15%;
+    color:#F2F2F2;
+    background-color: #0065FC;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 550px){
+    
+    
+    main{
+        margin-top: 20px;
+
+}
 }

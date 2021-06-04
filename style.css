@@ -59,7 +59,7 @@ a:hover{
     color: #0065FC;
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 750px) {
 
 header {
     width: max-content;
@@ -121,7 +121,7 @@ h1{
     font-weight: bold;
 }
 
-@media screen and (max-width: 550px){
+@media screen and (max-width: 750px){
     
     
     main{

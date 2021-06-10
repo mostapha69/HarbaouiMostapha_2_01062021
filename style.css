@@ -1,50 +1,194 @@
 body{
     
     font-family: 'raleway', sans-serif;
-    margin: 0;
+    margin: 1rem;
     }
     
 /*HEADER*/
 header{
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-end;   /*mettre tout le header à droite*/
     height: 4rem;
     padding: 0 1rem O 1rem;
 }
 
 .hebergements{
     margin-right: 1rem;
+   
 }
 
 .activites{
     margin-left: 1rem;
     margin-right: 1rem;
+    
 }
 
 .inscriptions{
     margin-left: 1rem;
-
+    font-weight: bold;
+    color: #0065FC;
 }
 
 header div img{
-    height: 2rem;
-    position: absolute;
+    height: 1.5rem;
+    width: 5rem;
+    position: absolute; /*positionner en "absolute" logo à gauche*/
     left: 0;
 }
 
 @media screen and (max-width:760px) {
     header{ 
         display: flex;
-        justify-content: space-around;
+        justify-content: space-around; /*centrer le header en responsive*/
+        flex-wrap: wrap;
         height: 4rem;
         padding: 0 1rem O 1rem;
         
     }
 
+    .menu 
+    {
+        align-self: flex-end; /*Passer les menus "Hebergements" et "Activités" a la ligne en-dessous 760px*/
+    }
    
 }    
 
 
+a /*liens par défauts non survolés*/
+{
+    text-decoration:none;
+}
+
+a:hover /*liens au survol*/
+{
+    text-decoration: overline;
+    color: #0065FC;
+    font-weight: bold;
+}
+
+
+/* HEADER */
 
 
 
+
+/*SECTION "HEBERGEMENTS" ET SECTION "LES PLUS POPULAIRES"*/
+
+.hebergements-populaires{      /*sections "populaires" et "logements à marseille"*/
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    
+    
+}
+
+.etoile{
+    color: #0065FC;
+}
+
+div img{
+    width: 11rem;
+    height: 6rem;
+}
+
+.section-hebergements{              /*section HEBERGEMENTS A MARSEILLE titre h1 compris*/
+    background-color: #F2F2F2;
+    width: 50rem;
+    
+    
+}
+
+.section-populaires /*section LES PLUS POPULAIRES titre h1 compris */
+{
+    background-color: #F2F2F2;      
+    
+}
+
+.logementsmarseille{
+    display: flex;
+    justify-content: space-around;
+    /* width: max-content; */
+    padding: 2rem 2rem 2rem 2rem;
+    flex-wrap: wrap;
+    
+
+       
+}
+
+.agencement{
+    padding: 0 1rem 1rem 1rem;
+}
+
+/*.hôtel{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    
+} */
+
+/* .hebergement4{
+    text-align-last: auto;
+} */
+
+/* @media screen and (max-width:760px){
+    .hebergements-populaires{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .section-hebergements{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+} */
+
+@media screen and (max-width:760px){
+    .hebergements-populaires{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .logementsmarseille{
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+    }
+
+   .logements-populaires{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+   }
+   .section-hebergements{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    
+    
+   }
+}
+   
+
+.img-responsive-vieux-port{
+    width: 15rem;
+    height: 25rem;
+    box-shadow: thistle;
+}
+
+.carte-img-vieux-port{
+    width: 15rem;
+    height: 30rem;
+}
+
+.bloc-img-vieux-port{
+    height: 75%;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+    

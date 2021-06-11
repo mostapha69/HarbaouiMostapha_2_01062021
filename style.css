@@ -100,7 +100,8 @@ div img{
 
 .section-populaires /*section LES PLUS POPULAIRES titre h1 compris */
 {
-    background-color: #F2F2F2;      
+    background-color: #F2F2F2; 
+    width: 20rem;     
     
 }
 

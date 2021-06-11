@@ -48,7 +48,7 @@ header div img{
 
     .menu 
     {
-        align-self: flex-end; /*Passer les menus "Hebergements" et "Activités" a la ligne en-dessous 760px*/
+        align-self: flex-end; /*Passer les menus "Hebergements" et "Activités" a la ligne en-dessous de 760px*/
     }
    
 }    
@@ -67,7 +67,7 @@ a:hover /*liens au survol*/
 }
 
 
-/* HEADER */
+/* Fin HEADER */
 
 
 
@@ -119,29 +119,7 @@ div img{
     padding: 0 1rem 1rem 1rem;
 }
 
-/*.hôtel{
-    display: flex;
-    flex-direction: column;
-    align-self: flex-start;
-    
-} */
 
-/* .hebergement4{
-    text-align-last: auto;
-} */
-
-/* @media screen and (max-width:760px){
-    .hebergements-populaires{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-    }
-    .section-hebergements{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-    }
-} */
 
 @media screen and (max-width:760px){
     .hebergements-populaires{
@@ -172,23 +150,148 @@ div img{
    }
 }
    
+/* FIN SECTION "HEBERGEMENTS" ET SECTION "LES PLUS POPULAIRES"*/
 
-.img-responsive-vieux-port{
+
+/* SECTION ACTIVITES */
+
+.loisirs-a-marseille     /*aligner les éléments de la section Activités à Marseille*/
+{
+    display: flex;
+}
+
+.img-vieux-port{
     width: 15rem;
-    height: 25rem;
-    box-shadow: thistle;
+    height: 22rem;
+    
 }
 
 .carte-img-vieux-port{
     width: 15rem;
-    height: 30rem;
+    height: 25rem;
+    background-color: blue;
+    border-radius: 25px;
+    box-shadow: black;
 }
 
 .bloc-img-vieux-port{
-    height: 75%;
+    height: 90%;
     width: 100%;
     overflow: hidden;
 }
 
 
+
+
+.img-Fort-de-Pomegues{
+    width: 16rem;
+    height: 8rem;
     
+
+}  
+
+.carte-img-Fort-de-Pomegues{
+    width: 16rem;
+    height: 11rem;
+    border-radius: 25px;
+    background-color: blue;
+
+}
+
+.bloc-img-Fort-de-pomegues{
+    height: 90%;
+    width: 100%;
+    overflow: hidden;
+}   
+
+
+
+.img-iles-du-frioul{
+    width: 16rem;
+    height: 8rem;
+    
+}
+
+.carte-iles-du-frioul{
+    width: 16rem;
+    height: 11rem;
+    border-radius: 25px;
+    background-color: blue;
+    
+    
+
+}
+
+.bloc-img-iles-du-frioul{
+    height: 90%;
+    width: 100%;
+    overflow: hidden;
+}
+
+    
+
+
+.img-Parc-National-des-Calanques{
+    width: 15rem;
+    height: 22rem;
+    
+}
+
+.carte-Parc-National-des-Calanques{
+    width: 15rem;
+    height: 25rem;
+    border-radius: 25px;
+    box-shadow: black;
+    background-color: blue;
+}
+
+.bloc-Parc-National-des-Calanques{
+    height: 70%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.img-Notre-Dame-de-la-Garde{
+    width: 16rem;
+    height: 8rem;
+    
+}
+
+.carte-Notre-Dame-de-la-Garde{
+    width: 16rem;
+    height: 11rem;
+    border-radius: 25px;
+    background-color: blue;
+    
+    
+
+}
+
+.bloc-img-Notre-Dame-de-la-Garde{
+    height: 90%;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+.img-Parc-Longchamp{
+    width: 20rem;
+    height: 8rem;
+    
+}
+
+.carte-Parc-Longchamp{
+    width: 16rem;
+    height: 11rem;
+    border-radius: 25px;
+    background-color: blue;
+    
+    
+
+}
+
+.bloc-img-Parc-Longchamp{
+    height: 90%;
+    width: 100%;
+    overflow: hidden;
+}

@@ -36,24 +36,6 @@ header div img{
     left: 0;
 }
 
-@media screen and (max-width:760px) {
-    header{ 
-        display: flex;
-        justify-content: space-around; /*centrer le header en responsive*/
-        flex-wrap: wrap;
-        height: 4rem;
-        padding: 0 1rem O 1rem;
-        
-    }
-
-    .menu 
-    {
-        align-self: flex-end; /*Passer les menus "Hebergements" et "Activités" a la ligne en-dessous de 760px*/
-    }
-   
-}    
-
-
 a /*liens par défauts non survolés*/
 {
     text-decoration:none;
@@ -67,6 +49,64 @@ a:hover /*liens au survol*/
 }
 
 
+@media screen and (max-width:760px) {
+    header{ 
+        display: flex;
+        /* justify-content: ;
+        flex-wrap: wrap; */
+        height: 4rem;
+        margin-bottom: 2rem;
+        
+        
+    }
+
+    .menu /*la classe "menu" regroupe "hebergements"et "activites" du HEADER"*/
+    {
+        align-self: flex-end; /*Passer les menus "Hebergements" et "Activités" a la ligne en-dessous de 760px*/
+        border-bottom: 0.2rem solid rgb(228, 220, 220);
+        
+        
+    }
+
+    .hebergements{
+        width: 50vw; /*largeur de l'élément "hebergements" 50% de la fenêtre*/
+        /* justify-self: center; */
+        text-align: center;
+        margin-right: 0rem;
+    }
+   
+    .activites{
+        width: 50vw;  /*largeur de l'élément "activites" 50% de la fenêtre*/
+        text-align: center;
+        margin-left: 0rem;
+    }
+
+    .inscriptions{
+        position: absolute;  /*position en absolute de "s'inscrire" à droite*/
+        right: 0rem;
+    }
+
+    a /*liens par défauts non survolés*/
+{
+    text-decoration:none;
+}
+
+a:hover /*liens au survol*/
+{
+    text-decoration: underline;
+    color: #0065FC;
+    font-weight: bold;
+}
+
+
+}    
+
+
+/* FIN de @media screen and (max-width:760px) pour HEADER */
+
+
+
+
 /* Fin HEADER */
 
 
@@ -78,8 +118,7 @@ a:hover /*liens au survol*/
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-    
-    
+       
 }
 
 .etoile{
@@ -93,7 +132,9 @@ div img{
 
 .section-hebergements{              /*section HEBERGEMENTS A MARSEILLE titre h1 compris*/
     background-color: #F2F2F2;
-    width: 50rem;
+    width: 67vw;
+    margin-right: 2rem;
+    
     
     
 }
@@ -101,19 +142,27 @@ div img{
 .section-populaires /*section LES PLUS POPULAIRES titre h1 compris */
 {
     background-color: #F2F2F2; 
-    width: 20rem;     
+    width: 33vw;  /* largeur de la section  NB: permet d'agrandir ou rétrécir les cartes en même temps*/
+    align-content: center; 
     
 }
 
 .logementsmarseille{
     display: flex;
-    justify-content: space-around;
-    /* width: max-content; */
-    padding: 2rem 2rem 2rem 2rem;
+    justify-content: space-between;
+    width: 100%;
+    /* padding: 0rem 2rem 0rem 0rem; */
     flex-wrap: wrap;
-    
-
-       
+    /* margin-right: 0rem;
+    margin-left: 0rem;        */
+}
+@media screen and (min-width: 1590px){
+    .logementsmarseille{
+            display: flex;
+            justify-content: space-between;
+            width: 90%;   /*pour que ce soit bien aligné au-dessus de 1590px*/
+            flex-wrap: wrap;
+    }
 }
 
 .agencement{
@@ -121,36 +170,478 @@ div img{
 }
 
 
+.logements-populaires{
+    display: flex;
+    /* flex-direction: column; */
+    /* align-items: center; */
+    flex-wrap: wrap;
+    justify-content: space-between;  /*espaces entre les cartes*/
+    /* display: block;       pour que toutes mes images soient bien alignés sur le même axe vertical à cause du bug de la deuxieme image en desktop */
+    margin-left: 0.5rem;
+}
+
+
+.hotel{
+    display: flex;
+    margin-right: 1rem;     
+}
+
+.organiser{
+    display: flex;  /*display flex pour les cartes section "les plus populaires" en desktop*/
+    
+}
+
+.alignement{
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;  /*espacer le texte des cartes section "les plus populaires en desktop */
+}
+
+.titre-populaire{
+    margin-bottom: 1rem; /*marge sous le titre h1*/
+}
+
+
+
+.carte-le-soleil-du-matin{
+    margin-bottom: 1rem;
+    background-color: white;
+    border-radius: 25px;
+    border: 0.2rem solid white;
+    /*width: 100%;*/  /*agrandir la largeur de la carte*/   
+    
+}
+
+
+.bloc-img-le-soleil-du-matin{
+    width: 60%;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+
+
+.carte-au-coeur-de-leau{
+    margin-bottom: 1rem;
+    background-color: white;
+    border-radius: 25px;
+    border: 0.2rem solid white;
+    height: 6rem;
+    width: 23rem;
+
+    
+
+}
+
+.bloc-img-au-coeur-de-leau{
+    width: 53%;  /*largeur différente des aurtres car mauvais alignement*/
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+  
+
+
+.carte-tout-bleu-et-blanc{
+    margin-bottom: 1rem;
+    background-color: white;
+    border-radius: 25px;
+    border: 0.2rem solid white;
+
+}
+
+
+.bloc-img-tout-bleu-et-blanc{
+width: 60%;
+overflow: hidden;
+border-radius: 25px;
+}
 
 @media screen and (max-width:760px){
     .hebergements-populaires{
         display: flex;
         flex-direction: column;
-        align-items: center;
-        
+        align-items: center;     /*Les 2 sections sont centrées     */
     }
 
     .logementsmarseille{
         display: flex;
         flex-direction: column;
-        align-items: center; 
+        align-items: center;
+    
+        
     }
+
 
    .logements-populaires{
        display: flex;
        flex-direction: column;
-       align-items: center;
-   }
+       background-color: #F2F2F2;
+        flex-wrap: wrap; 
+        margin-left: 2.5rem;  /*pour centrer les cartes en max760px*/
+      
+    } 
+
+
    .section-hebergements{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: white;
+    flex-direction: column; 
+     align-items: center;
+    background-color:white;
     
-    
-   }
 }
+
+
+
+    .section-populaires{
+         /* text-align: center;pour centrer les textes section "les plus populaires"  */
+        width: 100vw;   /*section populaire prend toute la largeur de la fenêtre.backgroun-color:#F2F2F2(gris) prend donc toute la largeur*/
+       
+        
+    }
+ 
+    
+/*cartes images de la section "Les plus populaires"" @media screen and (max-width:760px)*/
+    
+    .alignement{
+            margin-left: 1rem;   /*espacer le texte des images */
+            width: 60%;
+    }
    
+    .carte-le-soleil-du-matin{
+        width: 85vw;    /*carte prend 85% largeur du viewport*/
+        background-color: white; 
+        border-radius: 25px;
+    }
+
+    .bloc-img-le-soleil-du-matin{
+        width: 35%;
+        overflow: hidden;
+        display: flex; 
+        border: 0.2rem solid white;
+        
+    }
+
+   
+.carte-au-coeur-de-leau{
+    width: 85vw;    /*carte prend 85% largeur du viewport*/
+    background-color: white; 
+    border-radius: 25px;
+      
+    
+}
+
+.bloc-img-au-coeur-de-leau{
+    width: 35%;
+    overflow: hidden;
+    display: flex; 
+    border: 0.2rem solid white;
+}
+.carte-tout-bleu-et-blanc{
+    width: 85vw;    /*carte prend 85% largeur du viewport*/
+    background-color: white; 
+    border-radius: 25px;
+      
+      
+    
+}
+
+.bloc-img-tout-bleu-et-blanc{
+    width: 35%;
+    overflow: hidden;
+    display: flex; 
+    border: 0.2rem solid white;
+}
+}
+
+/*cartes images de la section hébergements*/
+.carte-Auberge-La-Cannebiere{
+    width: 14rem;
+    /* height: 6rem; */
+    margin-bottom: 1rem;
+    text-align: center;
+    margin-right: 0rem;
+    }
+    
+.bloc-img-Auberge-La-Cannebiere{
+        width: 80%;
+        overflow: hidden;
+        background-color:white;
+        border-radius: 25px;
+        border: 0.2rem solid white;
+    }
+    
+.img-Auberge-La-Cannebiere{
+        width: 100%;
+        height: 6rem;
+    }
+
+
+    .carte-Hotel-du-port{
+            width: 14rem;
+            /* height: 6rem; */
+            margin-bottom: 1rem;
+            text-align: center;
+            }
+
+    
+    
+    .bloc-img-Hotel-du-port{
+        width: 80%;
+        overflow: hidden;
+        background-color:white;
+        border-radius: 25px;
+        border: 0.2rem solid white;
+    }
+    
+    
+    .img-Hotel-du-port{
+        width: 100%;
+        height: 6rem;
+    }
+
+    .carte-Hotel-Les-mouettes{
+        width: 14rem;
+            /* height: 6rem; */
+        margin-bottom: 1rem;
+        text-align: center;
+            }
+      
+    .bloc-img-Hotel-Les-mouettes{
+        width: 80%;
+        overflow: hidden;
+        background-color:white;
+        border-radius: 25px;
+        border: 0.2rem solid white;
+    }
+    
+    
+    .img-Hotel-Les-mouettes{
+        width: 100%;
+        height: 6rem;
+    }
+    .carte-Hotel-de-la-mer{
+        width: 14rem;
+            /* height: 6rem; */
+            margin-bottom: 1rem;
+            text-align: center;
+            }
+    
+    
+    
+    .bloc-img-Hotel-de-la-mer{
+        width: 80%;
+        overflow: hidden;
+        background-color:white;
+        border-radius: 25px;
+        border: 0.2rem solid white;
+    }
+    
+    
+    .img-Hotel-de-la-mer{
+        width: 100%;
+        height: 6rem;
+    }
+    
+    .carte-Auberge-Le-Panier{
+        width: 14rem;
+        /* height: 6rem; */
+        margin-bottom: 1rem;
+        text-align: center;
+        }
+    
+    
+    
+    
+    .bloc-img-carte-Auberge-Le-Panier{
+        width: 80%;
+        overflow: hidden;
+        background-color:white;
+        border-radius: 25px;
+        border: 0.2rem solid white;
+    }
+    
+    
+    .img-carte-Auberge-Le-Panier{
+        width: 100%;
+        height: 6rem;
+    }
+    
+    .carte-Hotel-chez-Amina{
+        width: 14rem;
+            /* height: 6rem; */
+            margin-bottom: 1rem;
+            text-align: center;
+            }
+    
+    
+    
+    .bloc-img-Hotel-chez-Amina{
+        width: 80%;
+        overflow: hidden;
+        background-color:white;
+        border-radius: 25px;
+        border: 0.2rem solid white;
+    }
+    
+    
+    .img-Hotel-chez-Amina{
+        width: 100%;
+        height: 6rem;
+    }
+
+/*cartes images de la section hébergements @media screen and (max-width:760px)*/
+@media screen and (max-width:760px){
+.carte-Auberge-La-Cannebiere{
+width: 90vw;
+display: flex;
+padding-left: 0rem;
+margin-right: 5rem;
+/* justify-content: center; */
+/* text-align: center; */
+
+}
+
+
+.bloc-img-Auberge-La-Cannebiere{
+    width: 80%;
+    overflow: hidden;
+    background-color:white;
+    border-radius: 25px;
+    box-shadow: 0rem 0.2rem 0rem 0rem #F2F2F2;  /*ombre seulement en bas de l'image*/
+
+}
+
+.img-Auberge-La-Cannebiere{
+    width: 100%;
+    height: 7rem;
+}
+
+.carte-Hotel-du-port{
+    width: 90vw;
+    display: flex;
+    /* justify-content: center;
+    text-align: center; */
+    padding-left: 0rem;
+    margin-right: 5rem;
+
+}
+
+
+.bloc-img-Hotel-du-port{
+    width: 80%;
+    overflow: hidden;
+    background-color:white;
+    border-radius: 25px;
+    box-shadow: 0rem 0.2rem 0rem 0rem #F2F2F2;
+}
+
+
+.img-Hotel-du-port{
+    width: 100%;
+    height: 7rem;
+}
+
+.carte-Hotel-Les-mouettes{
+    width: 90vw;
+    display: flex;
+    /* justify-content: center;
+    text-align: center; */
+    padding-left: 0rem;
+    margin-right: 5rem;
+
+}
+
+
+.bloc-img-Hotel-Les-mouettes{
+    width: 80%;
+    overflow: hidden;
+    background-color:white;
+    border-radius: 25px;
+    box-shadow: 0rem 0.2rem 0rem 0rem #F2F2F2;
+}
+
+
+.img-Hotel-Les-mouettes{
+    width: 100%;
+    height: 7rem;
+}
+
+.carte-Hotel-de-la-mer{
+    width: 90vw;
+    display: flex;
+    /* justify-content: center;
+    text-align: center; */
+    padding-left: 0rem;
+    margin-right: 5rem;
+}
+
+
+.bloc-img-Hotel-de-la-mer{
+    width: 80%;
+    overflow: hidden;
+    background-color:white;
+    border-radius: 25px;
+    box-shadow: 0rem 0.2rem 0rem 0rem #F2F2F2;
+}
+
+
+.img-Hotel-de-la-mer{
+    width: 100%;
+    height: 7rem;
+}
+
+.carte-Auberge-Le-Panier{
+    width: 90vw;
+    display: flex;
+    /* justify-content: center;
+    text-align: center; */
+    padding-left: 0rem;
+    margin-right: 5rem;
+}
+
+
+
+.bloc-img-carte-Auberge-Le-Panier{
+    width: 80%;
+    overflow: hidden;
+    background-color:white;
+    border-radius: 25px;
+    box-shadow: 0rem 0.2rem 0rem 0rem #F2F2F2;
+}
+
+
+.img-carte-Auberge-Le-Panier{
+    width: 100%;
+    height: 7rem;
+}
+
+.carte-Hotel-chez-Amina{
+    width: 90vw;
+    display: flex;
+    /* justify-content: center;
+    text-align: center; */
+    padding-left: 0rem;
+    margin-right: 5rem;
+}
+
+
+.bloc-img-Hotel-chez-Amina{
+    width: 80%;
+    overflow: hidden;
+    background-color:white;
+    border-radius: 25px;
+    box-shadow: 0rem 0.2rem 0rem 0rem #F2F2F2;
+}
+
+
+.img-Hotel-chez-Amina{
+    width: 100%;
+    height: 7rem;
+}
+}
+
 /* FIN SECTION "HEBERGEMENTS" ET SECTION "LES PLUS POPULAIRES"*/
 
 
@@ -159,140 +650,243 @@ div img{
 .loisirs-a-marseille     /*aligner les éléments de la section Activités à Marseille*/
 {
     display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.img-vieux-port{
-    width: 15rem;
+
+
+.img-vieux-port{       /*img-vieux-port= photo du vieux port seulement*/
+    width: 100%;    /*largeur de l'image=100% de la carte-img-vieux-port*/
     height: 22rem;
-    
+    border-radius: 25px; /*arrondir les angles en bas de la carte*/
 }
 
-.carte-img-vieux-port{
-    width: 15rem;
+.carte-img-vieux-port{    /*carte-img-vieux-port= image complète(photo+le dessous) */
+    width: 16rem;
     height: 25rem;
-    background-color: blue;
-    border-radius: 25px;
-    box-shadow: black;
+    border-radius: 25px;        /*arrondir les angles en bas de la carte*/
+    box-shadow: 0 2px 0 0 rgb(248, 245, 242);  /*ombre en bas de la carte*/
 }
 
 .bloc-img-vieux-port{
-    height: 90%;
+    height: 80%;   /*l'image prend 80% de la carte*/
     width: 100%;
-    overflow: hidden;
+    overflow: hidden;  /*pour rogner une partie de l'image et y placer ensuite mon texte*/
 }
 
-
-
-
-.img-Fort-de-Pomegues{
-    width: 16rem;
-    height: 8rem;
-    
-
-}  
 
 .carte-img-Fort-de-Pomegues{
     width: 16rem;
-    height: 11rem;
-    border-radius: 25px;
-    background-color: blue;
+    height: 13rem;
+    border-radius: 25px;    /*arrondir les angles*/
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 0 0 rgb(248, 245, 242);
 
 }
 
-.bloc-img-Fort-de-pomegues{
-    height: 90%;
-    width: 100%;
+.bloc-img-Fort-de-Pomegues{
+    height: 80%;
+    width: 100%; 
     overflow: hidden;
 }   
 
+.img-Fort-de-Pomegues{
+    width: 100%;
+    height: 12rem;
+    border-radius: 25px;
+} 
 
-
-.img-iles-du-frioul{
-    width: 16rem;
-    height: 8rem;
-    
-}
 
 .carte-iles-du-frioul{
     width: 16rem;
     height: 11rem;
     border-radius: 25px;
-    background-color: blue;
-    
-    
-
+    box-shadow: 0 2px 0 0 rgb(248, 245, 242);
 }
 
 .bloc-img-iles-du-frioul{
-    height: 90%;
+    height: 80%;
     width: 100%;
     overflow: hidden;
 }
 
-    
-
-
-.img-Parc-National-des-Calanques{
-    width: 15rem;
-    height: 22rem;
+.img-iles-du-frioul{
+    width: 100%;
+    height: 10rem;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
     
 }
+
+    
 
 .carte-Parc-National-des-Calanques{
-    width: 15rem;
+    width: 16rem;
     height: 25rem;
     border-radius: 25px;
-    box-shadow: black;
-    background-color: blue;
+    box-shadow: 0 2px 0 0 rgb(248, 245, 242);
 }
 
-.bloc-Parc-National-des-Calanques{
-    height: 70%;
+.bloc-img-Parc-National-des-Calanques{
+    height: 80%;
+    width: 100%;
+    overflow: hidden;
+} 
+
+.img-Parc-National-des-Calanques{
+    width: 100%;
+    height: 22rem;
+    border-radius: 25px;
+    
+}
+
+
+
+.carte-Notre-Dame-de-la-Garde{
+    width: 16rem;
+    height: 12rem;
+    border-radius: 25px;
+    /* background-color: blue; */
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 0 0 rgb(248, 245, 242);
+}
+
+.bloc-img-Notre-Dame-de-la-Garde{
+    height: 80%;
     width: 100%;
     overflow: hidden;
 }
 
 .img-Notre-Dame-de-la-Garde{
-    width: 16rem;
-    height: 8rem;
-    
-}
-
-.carte-Notre-Dame-de-la-Garde{
-    width: 16rem;
-    height: 11rem;
-    border-radius: 25px;
-    background-color: blue;
-    
-    
-
-}
-
-.bloc-img-Notre-Dame-de-la-Garde{
-    height: 90%;
     width: 100%;
-    overflow: hidden;
-}
-
-
-.img-Parc-Longchamp{
-    width: 20rem;
-    height: 8rem;
+    height: 10rem;
+    border-radius: 25px;
     
 }
+
 
 .carte-Parc-Longchamp{
     width: 16rem;
-    height: 11rem;
+    height: 12rem;
     border-radius: 25px;
-    background-color: blue;
-    
-    
-
+    /* background-color: blue; */
+    box-shadow: 0 2px 0 0 rgb(248, 245, 242);
 }
 
 .bloc-img-Parc-Longchamp{
-    height: 90%;
+    height: 80%;
     width: 100%;
     overflow: hidden;
 }
+
+.img-Parc-Longchamp{
+    width: 100%;
+    height: 10rem;  
+    border-radius: 25px; 
+}
+
+
+@media screen and (max-width:760px){         /*pour la section "ACTIVITES"*/
+    .activites-a-marseille{
+        text-align: center;
+        
+    }
+    
+    
+    
+    .loisirs-a-marseille{
+        display: flex;
+        flex-direction: column;
+        margin-left: 3rem;
+        /* align-content: center; */
+        /* justify-content: space-between; */
+    }
+
+    
+
+    .carte-img-vieux-port{
+        /* width: 16rem;
+        height: 14em; */
+        width: 75vw;
+        margin-bottom: 2rem;
+        height: 9rem;
+        align-self: flex-start;  /*pour la replacer à gauche car cette image était décalée un peu sur la droite:*/
+    }
+    .img-vieux-port{
+        width: 100%;
+        height: 8rem;
+    }
+
+    
+
+    .carte-Parc-National-des-Calanques{
+        /* width: 16rem;
+        height: 14rem; */
+        width: 75vw;
+        margin-bottom: 2rem;
+        height: 9rem;
+        align-self: flex-start; /*pour la replacer à gauche car cette image était décalé un peu sur la droite*/
+    }
+
+    .img-Parc-National-des-Calanques{
+        width: 100%;
+        height: 8rem;
+    }
+
+    .carte-Parc-Longchamp{
+        /* width: 16rem;
+        height: 14rem; */
+        margin-bottom: 2rem;
+        width: 75vw;
+        height: 9rem;
+    }   
+
+    .img-Parc-Longchamp{
+        width: 100%;
+        height: 8rem;
+    }
+
+    .carte-Notre-Dame-de-la-Garde{
+        /* width: 16rem;
+        height: 14rem; */
+        margin-bottom: 2rem;
+        width: 75vw;
+        height: 9rem;
+        
+    } 
+
+    .img-Notre-Dame-de-la-Garde{
+        width: 100%;
+        height: 8rem; 
+    }
+
+
+
+    .carte-iles-du-frioul{
+        /* width: 16rem;
+        height: 11rem; */
+        margin-bottom: 2rem;
+        width: 75vw;
+        height: 9rem;
+    }  
+    
+    .img-iles-du-frioul{
+        width: 100%;
+        height: 8rem;
+    }
+    
+    .carte-img-Fort-de-Pomegues{
+        /* width: 16rem;
+        height: 14rem; */
+        margin-bottom: 2rem;
+        width: 75vw;
+        height: 9rem;
+    }
+
+    .img-Fort-de-Pomegues{
+        width: 100%;
+        height: 8rem; 
+    }
+}  
+

@@ -48,10 +48,18 @@
         </div>
 
 
+        <div id=logements-disponibles>
+            <div id="icone-info"><i class="fas fa-info iconi"></i></div>
+            <div>Plus de 500 logements sont disponibles dans cette ville</div>
+        </div>
+
         <div class=hebergements-populaires> <!-- class pour "les plus populaires"+"hebergements à marseille"  -->
 
             <section class="section-populaires"> <!--class uniquement pour la section "populaire" titre H1 compris-->
-            <h2 class="titre-populaire">Les plus populaires</h2>    <!--titre de la section-->
+            <div class="titre-icone">   
+                <h2 class="titre-populaire">Les plus populaires</h2>    <!--titre de la section-->
+                <div><i class="fas fa-chart-line iconcourbe"></i></div>
+            </div>
                 
                 <div class=logements-populaires>    <!--class uniquement pour la section "populaire" SANS le titre H1-->
 
@@ -213,11 +221,13 @@
                     </div> 
                 </div>    
 
-                  
+                <div>
+                    <button id="afficher-plus">Afficher plus</button>
+                </div>
 
             </section>
 
-        </div>
+        </div> <!--div de fin hebergements-populaires (regroupe les 2 sections du haut) -->
     
                     <!-- SECTION DU BAS -->
             <section class="activites-a-marseille">

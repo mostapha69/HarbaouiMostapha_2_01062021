@@ -109,7 +109,170 @@ a:hover /*liens au survol*/
 
 /* Fin HEADER */
 
+/*TEXTE EN-DESSOUS DU HEADER*/ 
 
+h1{
+    font-size: 2rem;
+    margin-bottom: 0.1rem;
+}
+
+
+/*MENU RECHERCHER*/
+
+.rechercher{
+    width: 16.5vw;
+    display: flex;
+    /* justify-content: space-between; */
+    margin-top: 2rem;
+    /* font-size: 1.5rem; */
+    border: solid #F2F2F2;
+    margin-right: 0rem;
+    border-radius: 25px;
+    background-color: #F2F2F2;   /*le background de l'icône "map"*/
+
+}
+
+.iconmap{
+    height: 1.5rem;
+    align-self: center;  /*pour que l'icône "map" soit bien alignée sur la même ligne */
+    /* justify-self: center; */
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    
+    
+
+    
+}
+
+.bouton-rechercher{
+    height: 3rem;
+    background-color: #0065FC;
+    color: white;
+    font-weight: bold;
+    border: solid #F2F2F2;
+    border-radius: 0px 25px 25px 0px;  /*bordures arrondies seulement à droite*/
+    font-size: 1.2rem;
+    
+
+}
+
+.search{
+    border: none;
+    border: solid #F2F2F2;
+}
+
+.search{
+    font-weight: bold;
+    
+}
+
+
+
+/*MENU FILTRES*/
+
+.filtres{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 65vw;
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 1.3rem;
+
+}
+
+
+.iconfiltre{
+    color: #0065FC;
+    margin-right: 1rem;
+    background-color: #DEEBFF;
+    border-radius: 50%;   /*pour faire un cercle*/
+    font-size: 1.3rem;  /*agrandir les îcones*/
+    
+}
+    
+.ajuster{
+    border: solid #F2F2F2;
+    border-radius: 25px;
+    /* height: 2rem; */
+    
+}
+
+span:hover{         /*seulement pour que ça change d'effet au survol / ce n'est pas un lien*/
+    color: #0065FC;
+}
+
+#trier{
+    font-weight: bold;
+    font-size: 1.1rem;
+    align-self: center;   /*pour que "filtres"soit bien aligné sur la même ligne*/
+}
+
+.eco-famille{
+    display: flex; /* "economique" et "familial" rsetent alignés sur la même ligne*/
+    
+}
+
+.premier{
+    margin-right: 2.5rem;
+}
+
+
+@media screen and (max-width:760px) {
+    .filtres{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    
+
+    .eco-famille{
+        display: flex;
+        
+    }
+
+    #trier{
+        margin-bottom: 1rem;
+        align-self: flex-start;  /*aligné à gauche en max-width:760px*/
+    }
+
+    .premier{                       /*pour que la bordure ne rétrécit pas*/
+        width: 14rem;
+        /* height: 1.7rem; */
+        
+} 
+    .deuxieme{                      /*pour que la bordure ne rétrécit pas*/
+        width: 9rem;
+    } 
+
+    .troisieme{                     /*pour que la bordure ne rétrécit pas*/
+        width:12rem;
+    }
+
+    .quatrieme{                     /*pour que la bordure ne rétrécit pas*/
+        width: 18rem;
+    }
+}
+
+
+
+/*TEXTE EN-DESSOUS DU MENU "Filtres"*/
+
+#logements-disponibles{
+    display: flex;
+    margin-bottom: 2rem;
+    
+}
+
+#icone-info{
+    margin-right: 1rem;
+}
+
+.fa-info{
+    color: #0065FC;
+}
 
 
 /*SECTION "HEBERGEMENTS" ET SECTION "LES PLUS POPULAIRES"*/
@@ -130,7 +293,7 @@ div img{
     height: 6rem;
 }
 
-.section-hebergements{              /*section HEBERGEMENTS A MARSEILLE titre h1 compris*/
+.section-hebergements{      /*section HEBERGEMENTS A MARSEILLE titre h2 compris*/
     background-color: #F2F2F2;
     width: 67vw;
     margin-right: 2rem;
@@ -139,7 +302,7 @@ div img{
     
 }
 
-.section-populaires /*section LES PLUS POPULAIRES titre h1 compris */
+.section-populaires /*section LES PLUS POPULAIRES titre h2 compris */
 {
     background-color: #F2F2F2; 
     width: 33vw;  /* largeur de la section  NB: permet d'agrandir ou rétrécir les cartes en même temps*/
@@ -165,8 +328,20 @@ div img{
     }
 }
 
-.agencement{
+.agencement{    /* dans hébergements à marseille padding pour les cartes*/ 
     padding: 0 1rem 1rem 1rem;
+}
+
+
+
+.titre-icone{     /*titre + icône de la section "les plus populaires*/
+    display: flex;
+    justify-content: space-around;
+}
+
+.iconcourbe{
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
 }
 
 
@@ -199,7 +374,7 @@ div img{
 }
 
 .titre-populaire{
-    margin-bottom: 1rem; /*marge sous le titre h1*/
+    margin-bottom: 1rem; /*marge sous le titre h2*/
 }
 
 
@@ -489,6 +664,20 @@ border-radius: 25px;
     .img-Hotel-chez-Amina{
         width: 100%;
         height: 6rem;
+    }
+
+    #afficher-plus{
+        font-size: 1.2rem;
+        font-weight: bold;
+        border: none;
+    }
+    
+    
+    @media screen and (max-width:760px){
+        #afficher-plus{
+            position: absolute;
+            left: 0rem;    /*placer "Afficher plus" à gauche*/
+        }
     }
 
 /*cartes images de la section hébergements @media screen and (max-width:760px)*/
@@ -938,155 +1127,6 @@ footer{
     
 }
 
-/*MENU FILTRES*/
-
-.filtres{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 60vw;
-    font-weight: bold;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    font-size: 1.5rem;
-
-}
-
-
-.iconfiltre{
-    color: #0065FC;
-    margin-right: 1rem;
-    background-color: #DEEBFF;
-    border-radius: 50%;   /*pour faire un cercle*/
-    font-size: 1.5rem;  /*agrandir les îcones*/
-    
-}
-    
-.ajuster{
-    border: solid #F2F2F2;
-    border-radius: 25px;
-    /* height: 2rem; */
-    
-}
-
-span:hover{         /*seulement pour que ça change d'effet au survol / ce n'est pas un lien*/
-    color: #0065FC;
-}
-
-#trier{
-    font-weight: bold;
-    font-size: 1.3rem;
-    align-self: center;   /*pour que "filtres"soit bien aligné sur la même ligne*/
-}
-
-.eco-famille{
-    display: flex; /* "economique" et "familial" rsetent alignés sur la même ligne*/
-    
-}
-
-.premier{
-    margin-right: 3rem;
-}
-
-
-@media screen and (max-width:760px) {
-    .filtres{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-    }
-
-    
-
-    .eco-famille{
-        display: flex;
-        
-    }
-
-    #trier{
-        margin-bottom: 1rem;
-        align-self: flex-start;  /*aligné à gauche en max-width:760px*/
-    }
-
-    .premier{                       /*pour que la bordure ne rétrécit pas*/
-        width: 14rem;
-        /* height: 1.7rem; */
-        
-} 
-    .deuxieme{                      /*pour que la bordure ne rétrécit pas*/
-        width: 9rem;
-    } 
-
-    .troisieme{                     /*pour que la bordure ne rétrécit pas*/
-        width:12rem;
-    }
-
-    .quatrieme{                     /*pour que la bordure ne rétrécit pas*/
-        width: 18rem;
-    }
-}
-
-/* @media screen and (max-width:536px) {
-    .premier{
-        justify-content: space-between;
-    }
-    
-} */
-
-
-/*MENU RECHERCHER*/
-
-.rechercher{
-    width: 16.5vw;
-    display: flex;
-    /* justify-content: space-between; */
-    margin-top: 2rem;
-    /* font-size: 1.5rem; */
-    border: solid #F2F2F2;
-    margin-right: 0rem;
-    border-radius: 25px;
-
-}
-
-.iconmap{
-    height: 1.5rem;
-    align-self: center;  /*pour que l'icône "map" soit bien alignée sur la même ligne */
-    /* justify-self: center; */
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    
-    
-
-    
-}
-
-.bouton-rechercher{
-    height: 3rem;
-    background-color: #0065FC;
-    color: white;
-    font-weight: bold;
-    border: solid #F2F2F2;
-    border-radius: 0px 25px 25px 0px;  /*bordures arrondies seulement à droite*/
-    font-size: 1.2rem;
-    
-
-}
-
-.search{
-    border: none;
-    border: solid #F2F2F2;
-}
-
-.search{
-    font-weight: bold;
-    
-}
 
 
 
-/*h1*/
-
-h1{
-    font-size: 2rem;
-    margin-bottom: 0.1rem;
-}

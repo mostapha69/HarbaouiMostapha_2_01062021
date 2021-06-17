@@ -650,7 +650,7 @@ margin-right: 5rem;
 .loisirs-a-marseille     /*aligner les éléments de la section Activités à Marseille*/
 {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 
@@ -801,6 +801,7 @@ margin-right: 5rem;
         margin-left: 3rem;
         /* align-content: center; */
         /* justify-content: space-between; */
+        
     }
 
     
@@ -890,3 +891,202 @@ margin-right: 5rem;
     }
 }  
 
+
+/* FOOTER */
+
+.lien-footer{
+    color: black;
+
+    
+}
+
+footer a:hover{
+    text-decoration: none;
+    color: brown;
+}
+
+footer{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+    margin-bottom: 0rem;
+    background-color: #F2F2F2;
+    width: 100vw;
+    
+}
+
+.liste{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    
+}
+
+.ajuster{           
+    margin-bottom: 0.4rem;      /*faire une marge sous chaque ligne de texte*/
+}
+
+
+
+@media screen and (max-width:760px){
+   footer{
+       display: flex;
+       flex-direction: column;
+        
+      
+   } 
+    
+}
+
+/*MENU FILTRES*/
+
+.filtres{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 60vw;
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+
+}
+
+
+.iconfiltre{
+    color: #0065FC;
+    margin-right: 1rem;
+    background-color: #DEEBFF;
+    border-radius: 50%;   /*pour faire un cercle*/
+    font-size: 1.5rem;  /*agrandir les îcones*/
+    
+}
+    
+.ajuster{
+    border: solid #F2F2F2;
+    border-radius: 25px;
+    /* height: 2rem; */
+    
+}
+
+span:hover{         /*seulement pour que ça change d'effet au survol / ce n'est pas un lien*/
+    color: #0065FC;
+}
+
+#trier{
+    font-weight: bold;
+    font-size: 1.3rem;
+    align-self: center;   /*pour que "filtres"soit bien aligné sur la même ligne*/
+}
+
+.eco-famille{
+    display: flex; /* "economique" et "familial" rsetent alignés sur la même ligne*/
+    
+}
+
+.premier{
+    margin-right: 3rem;
+}
+
+
+@media screen and (max-width:760px) {
+    .filtres{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    
+
+    .eco-famille{
+        display: flex;
+        
+    }
+
+    #trier{
+        margin-bottom: 1rem;
+        align-self: flex-start;  /*aligné à gauche en max-width:760px*/
+    }
+
+    .premier{                       /*pour que la bordure ne rétrécit pas*/
+        width: 14rem;
+        /* height: 1.7rem; */
+        
+} 
+    .deuxieme{                      /*pour que la bordure ne rétrécit pas*/
+        width: 9rem;
+    } 
+
+    .troisieme{                     /*pour que la bordure ne rétrécit pas*/
+        width:12rem;
+    }
+
+    .quatrieme{                     /*pour que la bordure ne rétrécit pas*/
+        width: 18rem;
+    }
+}
+
+/* @media screen and (max-width:536px) {
+    .premier{
+        justify-content: space-between;
+    }
+    
+} */
+
+
+/*MENU RECHERCHER*/
+
+.rechercher{
+    width: 16.5vw;
+    display: flex;
+    /* justify-content: space-between; */
+    margin-top: 2rem;
+    /* font-size: 1.5rem; */
+    border: solid #F2F2F2;
+    margin-right: 0rem;
+    border-radius: 25px;
+
+}
+
+.iconmap{
+    height: 1.5rem;
+    align-self: center;  /*pour que l'icône "map" soit bien alignée sur la même ligne */
+    /* justify-self: center; */
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    
+    
+
+    
+}
+
+.bouton-rechercher{
+    height: 3rem;
+    background-color: #0065FC;
+    color: white;
+    font-weight: bold;
+    border: solid #F2F2F2;
+    border-radius: 0px 25px 25px 0px;  /*bordures arrondies seulement à droite*/
+    font-size: 1.2rem;
+    
+
+}
+
+.search{
+    border: none;
+    border: solid #F2F2F2;
+}
+
+.search{
+    font-weight: bold;
+    
+}
+
+
+
+/*h1*/
+
+h1{
+    font-size: 2rem;
+    margin-bottom: 0.1rem;
+}

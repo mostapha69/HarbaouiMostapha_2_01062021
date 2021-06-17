@@ -16,8 +16,8 @@
         
         <div class=image><img  src="./images/logo/Reservia@3x.png" alt="logo Réservia"></div>
              
-        <div class="menu hebergements"><a href="Hebergements.html" >Hébergements</a></div>
-        <div class="menu activites"> <a href="Activites.html" >Activités</a></div>
+        <div class="menu hebergements"><a href="#hebergements" >Hébergements</a></div>
+        <div class="menu activites"> <a href="#activites" >Activités</a></div>
         
         <div class="inscriptions">  <a href="inscriptions.html" >S'inscrire</a></div>
     
@@ -29,16 +29,24 @@
         <div>En plein centre ville ou en pleine nature</div>
 
         <!-- menu Rechercher  -->
-        <div>    
-        <i class="fas fa-map-marker-alt iconmap"></i>
-        <input type="search" placeholder="Marseille, France"> <!--pour que qu texte soit écrit par défaut-->
-        <input type="button" value="Rechercher">
+        <div class="rechercher">    
+            <i class="fas fa-map-marker-alt iconmap"></i>
+            <input class="search" type="search" placeholder="Marseille, France"> <!--pour que qu texte soit écrit par défaut-->
+            <input class="bouton-rechercher" type="button" value="Rechercher">
         </div>
 
 
         <!-- menu Filtre -->
-        
-        
+        <div class="filtres">
+        <div id="trier">Filtres</div>
+        <div class="eco-famille">
+        <div class="ajuster premier"><i class="fas fa-money-bill-wave iconfiltre"></i> <span>Economique</span></div>
+        <div class="ajuster deuxieme"><i class="fas fa-child iconfiltre"></i><span>Familial</span></div>
+        </div>
+        <div class="ajuster troisieme"><i class="fas fa-heart iconfiltre"></i><span>Romantique</span></div>
+        <div class="ajuster quatrieme"><i class="fas fa-dog iconfiltre"></i><span>Animaux autorisés</span></div>
+        </div>
+
 
         <div class=hebergements-populaires> <!-- class pour "les plus populaires"+"hebergements à marseille"  -->
 
@@ -104,7 +112,7 @@
                     <!-- SECTION Hebergements à Marseille -->
             <section class="section-hebergements">  <!--class uniquement pour la section "hebergements" titre H1 compris-->
 
-                <h2>Hébergements à Marseille</h2>  <!--titre de la section-->
+                <h2 id="hebergements">Hébergements à Marseille</h2>  <!--titre de la section-->
 
                 <div class=logementsmarseille>      <!--class uniquement pour la section "hebergements" SANS le titre H1-->
                     
@@ -115,7 +123,6 @@
                             <div>Auberge La Cannebiere</div>
                             <div>Nuit à partir de 25€</div>
                             <div class="etoile">
-                            <span><i class="fas fa-star"></i></span>
                             <span><i class="fas fa-star"></i></span>
                             <span><i class="fas fa-star"></i></span>
                             <span><i class="fas fa-star"></i></span>
@@ -152,7 +159,6 @@
                                 <span><i class="fas fa-star"></i></span>
                                 <span><i class="fas fa-star"></i></span>
                                 <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
                                 <span><i class="fas fa-star"></i></span></div>
                         </div>          
                     </div>
@@ -169,8 +175,6 @@
                             <div class= "etoile">
                                 <span><i class="fas fa-star"></i></span>
                                 <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
                                 <span><i class="fas fa-star"></i></span></div>
                         </div>        
                     </div>
@@ -184,7 +188,6 @@
                             <div>Auberge Le Panier</div>
                             <div>Nuit à partir de 23€</div>
                             <div class= "etoile">
-                                <span><i class="fas fa-star"></i></span>
                                 <span><i class="fas fa-star"></i></span>
                                 <span><i class="fas fa-star"></i></span>
                                 <span><i class="fas fa-star"></i></span>
@@ -218,7 +221,7 @@
     
                     <!-- SECTION DU BAS -->
             <section class="activites-a-marseille">
-                <h2>Activités à Marseille</h2>  <!--titre de la section-->
+                <h2 id="activites">Activités à Marseille</h2>  <!--titre de la section-->
 
             <div class=loisirs-a-marseille>
 
@@ -227,7 +230,7 @@
                     <div class="bloc-img-vieux-port">  
                     <img src="./activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Vieux Port" 
                     class="img-vieux-port">
-                </div>
+                    </div>
                     <div>Vieux Port</div>   <!--texte(légende) de l'image-->
                 </div>
 
@@ -281,5 +284,33 @@
 
             </section>
     </main>
+
+
+
+    <footer>
+
+        <div class="liste a-propos">
+            <div><h3>A propos</h3></div>
+            <div class="ajuster"><a class="lien-footer" href="fonctionnement-du-site">Fonctionnement du site</a></div>
+            <div class="ajuster"><a class="lien-footer" href="Conditions-generales-de-vente">Conditions générales de vente</a></div>
+            <div class="ajuster"><a class="lien-footer" href="Donnees-et-confidentialite">Données et confidentialité</a></div>
+        </div>
+
+
+        <div class="liste nos-hebergements">
+            <div><h3>Nos hébergements</h3></div>
+            <div class="ajuster"><a class="lien-footer " href="Charte-qualite">Charte qualité</a></div>
+            <div class="ajuster"><a class="lien-footer" href="Soumettre-votre-hotel">Soumettre votre hôtel</a></div>
+        </div>
+
+        
+        <div class="liste assistance">
+            <div><h3>Assistance</h3></div>
+            <div class="ajuster"><a class="lien-footer" href="Centre-d'aide">Centre d'aide</a></div>
+            <div class="ajuster"><a class="lien-footer" href="Nous-contacter">Nous contacter</a></div>   
+        </div>
+
+    </footer>
+
 </body>
 </html>

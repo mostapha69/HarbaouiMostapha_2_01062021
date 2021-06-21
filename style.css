@@ -1,21 +1,12 @@
 body{
     
     font-family: 'raleway', sans-serif;
-    
-    /* margin-left: 1rem;
-        margin-right: 1rem;  */
     max-width: 1310px;
     margin:auto;
-    
     }
 
-@media screen and (max-width:1350px) {
-    body{
-        margin-right: 2rem;
-        margin-left: 2rem;
-    }
-}
-    
+
+
 /*HEADER*/
 header{
     display: flex;
@@ -549,13 +540,15 @@ border-radius: 25px;
    .section-hebergements{
     display: flex;
     flex-direction: column; 
-    align-items: center;
     background-color:white;
     width: 100vw;       /*largeur total du viewport*/
 
     
 }
 
+#hebergements{  /*titre hebergements à Marseille*/
+        margin-left: 2rem;
+}
 
 
     .section-populaires{
@@ -949,6 +942,8 @@ justify-content: center;;
         background-color: white;
         margin-top: 1rem;
         margin-bottom: 2rem;
+        position: relative;
+        padding-left: 1rem;
         
     }
 }
@@ -1141,9 +1136,7 @@ justify-content: center;;
         font-size: 1.1rem;      
   }
  
-    #activites{
-        text-align: center;
-    }
+
 
 
     .loisirs-a-marseille{

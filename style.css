@@ -1,8 +1,20 @@
 body{
     
     font-family: 'raleway', sans-serif;
-    margin: 1rem;
+    
+    /* margin-left: 1rem;
+        margin-right: 1rem;  */
+    max-width: 1310px;
+    margin:auto;
+    
     }
+
+@media screen and (max-width:1350px) {
+    body{
+        margin-right: 2rem;
+        margin-left: 2rem;
+    }
+}
     
 /*HEADER*/
 header{
@@ -10,6 +22,9 @@ header{
     justify-content: flex-end;   /*mettre tout le header à droite*/
     height: 4rem;
     padding: 0 1rem O 1rem;
+    position: relative;
+    margin-bottom: 1rem;
+    
 }
 
 .hebergements{
@@ -25,6 +40,7 @@ header{
 
 .inscriptions{
     margin-left: 1rem;
+    margin-right: 1rem;
     font-weight: bold;
     color: #0065FC;
 }
@@ -32,8 +48,11 @@ header{
 header div img{
     height: 1.5rem;
     width: 5rem;
-    position: absolute; /*positionner en "absolute" logo à gauche*/
-    left: 0;
+    /* position: absolute; /*positionner en "absolute" logo à gauche*/
+    /* left: 1rem; */ 
+    position: absolute;
+    left:0.5rem;
+    
 }
 
 a /*liens par défauts non survolés*/
@@ -112,8 +131,12 @@ a:hover /*liens au survol*/
 /*TEXTE EN-DESSOUS DU HEADER*/ 
 
 h1{
-    font-size: 2rem;
-    margin-bottom: 0.1rem;
+    font-size: 1.2rem;
+    margin-bottom: 0.4rem;
+}
+
+h1 + div{    /*selectionne la div qui vient juste après le h1*/
+    font-size: 0.9rem;
 }
 
 
@@ -125,10 +148,11 @@ h1{
     /* justify-content: space-between; */
     margin-top: 2rem;
     /* font-size: 1.5rem; */
-    border: solid #F2F2F2;
     margin-right: 0rem;
     border-radius: 25px;
     background-color: #F2F2F2;   /*le background de l'icône "map"*/
+    margin-bottom: 1rem;
+    max-width: 218px;
 
 }
 
@@ -149,7 +173,7 @@ h1{
     background-color: #0065FC;
     color: white;
     font-weight: bold;
-    border: solid #F2F2F2;
+    border: 1px solid #F2F2F2;
     border-radius: 0px 25px 25px 0px;  /*bordures arrondies seulement à droite*/
     font-size: 1.2rem;
     
@@ -157,14 +181,13 @@ h1{
 }
 
 .search{
-    border: none;
-    border: solid #F2F2F2;
-}
-
-.search{
+    border: 1px solid #F2F2F2;
     font-weight: bold;
+    text-decoration: black;
     
 }
+
+
 
 
 
@@ -172,13 +195,14 @@ h1{
 
 .filtres{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
-    width: 65vw;
+    width: 70%;  /*70% de la largeur*/
     font-weight: bold;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    font-size: 1.3rem;
+    /* margin-top: 2rem;
+    margin-bottom: 2rem; */
+    font-size: 1rem;
+    /* margin: auto; */
 
 }
 
@@ -188,15 +212,14 @@ h1{
     margin-right: 1rem;
     background-color: #DEEBFF;
     border-radius: 50%;   /*pour faire un cercle*/
-    font-size: 1.3rem;  /*agrandir les îcones*/
+    font-size: 1.5rem;  /*agrandir les îcones*/
     
 }
     
 .ajuster{
-    border: solid #F2F2F2;
+    border: 0.2rem solid #F2F2F2;
     border-radius: 25px;
     /* height: 2rem; */
-    
 }
 
 span:hover{         /*seulement pour que ça change d'effet au survol / ce n'est pas un lien*/
@@ -206,17 +229,25 @@ span:hover{         /*seulement pour que ça change d'effet au survol / ce n'est
 #trier{
     font-weight: bold;
     font-size: 1.1rem;
-    align-self: center;   /*pour que "filtres"soit bien aligné sur la même ligne*/
+    align-self: center;
+    /* justify-content: flex-start ;   pour que "filtres"soit bien aligné sur la même ligne */
 }
 
 .eco-famille{
-    display: flex; /* "economique" et "familial" rsetent alignés sur la même ligne*/
-    
+    display: flex; /* "economique" et "familial" restent alignés sur la même ligne*/
+    justify-content: space-between;
+    width:20rem;  /*pour que "economique" et "familial" ne soient pas collés*/
+    max-width: 320px;
 }
 
-.premier{
-    margin-right: 2.5rem;
+@media screen and (min-width:1500px){
+    .eco-famille{
+    width:23rem;
 }
+}
+
+
+
 
 
 @media screen and (max-width:760px) {
@@ -226,36 +257,34 @@ span:hover{         /*seulement pour que ça change d'effet au survol / ce n'est
         flex-wrap: wrap;
     }
 
-    
 
     .eco-famille{
         display: flex;
         
-    }
+    } 
 
     #trier{
-        margin-bottom: 1rem;
-        align-self: flex-start;  /*aligné à gauche en max-width:760px*/
-    }
-
-    .premier{                       /*pour que la bordure ne rétrécit pas*/
-        width: 14rem;
-        /* height: 1.7rem; */
+         margin-bottom: 1rem;
+        align-self: flex-start;  /* "Filtres" est aligné à gauche en max-width:760px */
         
-} 
+    } 
+    .premier{                       /*pour que la bordure ne rétrécit pas*/
+        width: 10rem;
+        /* height: 1.7rem; */
+    } 
     .deuxieme{                      /*pour que la bordure ne rétrécit pas*/
-        width: 9rem;
+        width: 7rem;
     } 
 
     .troisieme{                     /*pour que la bordure ne rétrécit pas*/
-        width:12rem;
+        width:10rem;
     }
 
     .quatrieme{                     /*pour que la bordure ne rétrécit pas*/
-        width: 18rem;
+        width: 13rem;
     }
-}
 
+}
 
 
 /*TEXTE EN-DESSOUS DU MENU "Filtres"*/
@@ -263,6 +292,8 @@ span:hover{         /*seulement pour que ça change d'effet au survol / ce n'est
 #logements-disponibles{
     display: flex;
     margin-bottom: 2rem;
+    margin-top: 1rem;
+    font-size: 0.8rem;
     
 }
 
@@ -281,8 +312,6 @@ span:hover{         /*seulement pour que ça change d'effet au survol / ce n'est
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-    /* margin-bottom: 2rem; */
-       
 }
 
 .etoile{
@@ -290,8 +319,9 @@ span:hover{         /*seulement pour que ça change d'effet au survol / ce n'est
 }
 
 div img{
-    width: 11rem;
-    height: 6rem;
+    width: 13rem;
+    height: 10rem;
+    object-fit: cover;   /*des images nettes en responsive */
 }
 
 .section-hebergements{      /*section HEBERGEMENTS A MARSEILLE titre h2 compris*/
@@ -299,6 +329,7 @@ div img{
     width: 67vw;
     margin-right: 2rem;
     margin-bottom: 2rem;
+    max-width: 860px;
     
     
     
@@ -308,32 +339,62 @@ div img{
 {
     background-color: #F2F2F2; 
     width: 33vw;  /* largeur de la section  NB: permet d'agrandir ou rétrécir les cartes en même temps*/
-    align-content: center;
+    /* align-content: center; */
     margin-bottom: 2rem; 
     
+    
+    
 }
+@media screen and (min-width:1400px){
+    .section-populaires{
+    max-width: 480px;
+}
+}
+ 
+/* .logements-populaires div img{
+    width: 12rem;
+    height: 8rem;
+} */
 
 .logementsmarseille{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
-    /* padding: 0rem 2rem 0rem 0rem; */
     flex-wrap: wrap;
-    /* margin-right: 0rem;
-    margin-left: 0rem;        */
-}
-@media screen and (min-width: 1590px){
-    .logementsmarseille{
-            display: flex;
-            justify-content: space-between;
-            width: 90%;   /*pour que ce soit bien aligné au-dessus de 1590px*/
-            flex-wrap: wrap;
-    }
+    margin: auto;
 }
 
-.agencement{    /* dans hébergements à marseille padding pour les cartes*/ 
-    padding: 0 1rem 1rem 1rem;
-}
+/* .logementsmarseille div img{
+    width: 13rem;
+    height: 9rem;
+}    */
+
+ /* /* @media screen and (min-width: 1400px){ 
+    .logementsmarseille{ 
+        width:80%;      /* réduire largeur de la section pour avoir 3 images alignées sur la même ligne
+        
+     }   */
+    
+ /* }
+ @media screen and (min-width: 1790px){ 
+    .logementsmarseille{ 
+        width:70%;  /*pour avoir 3 images alignées sur la même ligne
+    }
+}    */
+
+
+/* @media screen and (min-width: 2020px){ 
+    .logementsmarseille{ 
+        width:55%;  /*pour avoir 3 images alignées sur la même ligne
+    }
+}   */ 
+
+
+.agencement{    
+    width: 18rem;
+     height:12rem; 
+} 
+
 
 
 
@@ -350,18 +411,19 @@ div img{
 
 .logements-populaires{
     display: flex;
-    /* flex-direction: column; */
-    /* align-items: center; */
     flex-wrap: wrap;
     justify-content: space-between;  /*espaces entre les cartes*/
-    /* display: block;       pour que toutes mes images soient bien alignés sur le même axe vertical à cause du bug de la deuxieme image en desktop */
     margin-left: 0.5rem;
 }
 
 
 .hotel{
     display: flex;
-    margin-right: 1rem;     
+    /* margin-right: 1rem;      */
+    margin: auto;
+    width: 90%; /*chaque carte= 80% de la largeur de la section*/
+    /* height: 7rem;  */
+    max-width: 90%;
 }
 
 .organiser{
@@ -373,47 +435,61 @@ div img{
     margin-left: 1rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;  /*espacer le texte des cartes section "les plus populaires en desktop */
+    justify-content: space-around;  /*espacer le texte de chaque carte dans la  section "les plus populaires en desktop */
+    width: 100%;
 }
+
+
 
 .titre-populaire{
     margin-bottom: 1rem; /*marge sous le titre h2*/
 }
 
 
+.zone-texte{
+    margin-left: 0.4rem; /*Marge gauche texte des  carte hébergements à marseille*/
+    
+}
+
+.petit-titre{
+    font-weight: bold;
+}
 
 .carte-le-soleil-du-matin{
+    width: 90%; /*prend 90% de la largeur*/
     margin-bottom: 1rem;
     background-color: white;
     border-radius: 25px;
     border: 0.2rem solid white;
-    /*width: 100%;*/  /*agrandir la largeur de la carte*/   
+    
+        
     
 }
 
 
 .bloc-img-le-soleil-du-matin{
-    width: 60%;
+    width: 100%;
     overflow: hidden;
     border-radius: 25px;
+    
 }
 
 
 
 .carte-au-coeur-de-leau{
+    width: 90%;
     margin-bottom: 1rem;
     background-color: white;
     border-radius: 25px;
     border: 0.2rem solid white;
-    height: 6rem;
-    width: 23rem;
+    
 
     
 
 }
 
 .bloc-img-au-coeur-de-leau{
-    width: 53%;  /*largeur différente des aurtres car mauvais alignement*/
+    width: 100%;  /*largeur différente des aurtres car mauvais alignement*/
     overflow: hidden;
     border-radius: 25px;
 }
@@ -422,6 +498,7 @@ div img{
 
 
 .carte-tout-bleu-et-blanc{
+    width: 90%;
     margin-bottom: 1rem;
     background-color: white;
     border-radius: 25px;
@@ -431,12 +508,19 @@ div img{
 
 
 .bloc-img-tout-bleu-et-blanc{
-width: 60%;
+width: 100%;
 overflow: hidden;
 border-radius: 25px;
 }
 
-@media screen and (max-width:760px){
+@media screen and (min-width:450px) and (max-width:950px) {
+    .hotel{                 /*cartes section Les plus populaires pas trop longues*/
+    max-width: 500px;
+    
+}    
+}
+
+  @media screen and (max-width:950px) /*(max-width:1050px)*/{  
     .hebergements-populaires{
         display: flex;
         flex-direction: column;
@@ -457,34 +541,33 @@ border-radius: 25px;
        flex-direction: column;
        background-color: #F2F2F2;
         flex-wrap: wrap; 
-        margin-left: 2.5rem;  /*pour centrer les cartes en max760px*/
-      
+       
     } 
 
+    
 
    .section-hebergements{
     display: flex;
     flex-direction: column; 
-     align-items: center;
+    align-items: center;
     background-color:white;
+    width: 100vw;       /*largeur total du viewport*/
+
     
 }
 
 
 
     .section-populaires{
-         /* text-align: center;pour centrer les textes section "les plus populaires"  */
-        width: 100vw;   /*section populaire prend toute la largeur de la fenêtre.backgroun-color:#F2F2F2(gris) prend donc toute la largeur*/
-       
-        
+        width: 100vw;   /*section populaire prend toute la largeur de la fenêtre.backgroun-color:#F2F2F2(gris) prend donc toute la largeur*/    
     }
- 
+} 
     
 /*cartes images de la section "Les plus populaires"" @media screen and (max-width:760px)*/
     
     .alignement{
-            margin-left: 1rem;   /*espacer le texte des images */
-            width: 60%;
+             margin-left: 1rem;   /*espacer le texte des images */
+             width: 60%;
     }
    
     .carte-le-soleil-du-matin{
@@ -494,7 +577,7 @@ border-radius: 25px;
     }
 
     .bloc-img-le-soleil-du-matin{
-        width: 35%;
+        width: 67%;
         overflow: hidden;
         display: flex; 
         border: 0.2rem solid white;
@@ -511,7 +594,7 @@ border-radius: 25px;
 }
 
 .bloc-img-au-coeur-de-leau{
-    width: 35%;
+    width: 67%;
     overflow: hidden;
     display: flex; 
     border: 0.2rem solid white;
@@ -526,24 +609,23 @@ border-radius: 25px;
 }
 
 .bloc-img-tout-bleu-et-blanc{
-    width: 35%;
+    width: 67%;
     overflow: hidden;
     display: flex; 
     border: 0.2rem solid white;
 }
-}
+
 
 /*cartes images de la section hébergements*/
 .carte-Auberge-La-Cannebiere{
     width: 14rem;
     /* height: 6rem; */
     margin-bottom: 1rem;
-    text-align: center;
     margin-right: 0rem;
     }
     
 .bloc-img-Auberge-La-Cannebiere{
-        width: 80%;
+        width: 85%;
         overflow: hidden;
         background-color:white;
         border-radius: 25px;
@@ -560,13 +642,12 @@ border-radius: 25px;
             width: 14rem;
             /* height: 6rem; */
             margin-bottom: 1rem;
-            text-align: center;
-            }
+        }
 
     
     
     .bloc-img-Hotel-du-port{
-        width: 80%;
+        width: 85%;
         overflow: hidden;
         background-color:white;
         border-radius: 25px;
@@ -583,11 +664,11 @@ border-radius: 25px;
         width: 14rem;
             /* height: 6rem; */
         margin-bottom: 1rem;
-        text-align: center;
+        
             }
       
     .bloc-img-Hotel-Les-mouettes{
-        width: 80%;
+        width: 85%;
         overflow: hidden;
         background-color:white;
         border-radius: 25px;
@@ -601,15 +682,14 @@ border-radius: 25px;
     }
     .carte-Hotel-de-la-mer{
         width: 14rem;
-            /* height: 6rem; */
-            margin-bottom: 1rem;
-            text-align: center;
-            }
+        /* height: 6rem; */
+        margin-bottom: 1rem;
+    }
     
     
     
     .bloc-img-Hotel-de-la-mer{
-        width: 80%;
+        width: 85%;
         overflow: hidden;
         background-color:white;
         border-radius: 25px;
@@ -626,14 +706,13 @@ border-radius: 25px;
         width: 14rem;
         /* height: 6rem; */
         margin-bottom: 1rem;
-        text-align: center;
-        }
+    }
     
     
     
     
     .bloc-img-carte-Auberge-Le-Panier{
-        width: 80%;
+        width: 85%;
         overflow: hidden;
         background-color:white;
         border-radius: 25px;
@@ -650,13 +729,12 @@ border-radius: 25px;
         width: 14rem;
             /* height: 6rem; */
             margin-bottom: 1rem;
-            text-align: center;
-            }
+    }
     
     
     
     .bloc-img-Hotel-chez-Amina{
-        width: 80%;
+        width: 85%;
         overflow: hidden;
         background-color:white;
         border-radius: 25px;
@@ -670,17 +748,22 @@ border-radius: 25px;
     }
 
 
+
 /*cartes images de la section hébergements @media screen and (max-width:760px)*/
-@media screen and (max-width:760px){
+ @media screen and (max-width:950px) /*and  (min-width:370px)*/  { 
 .carte-Auberge-La-Cannebiere{
-width: 90vw;
+width: 90%;
 display: flex;
-padding-left: 0rem;
-margin-right: 5rem;
-/* justify-content: center; */
+min-height: 16rem;
+justify-content: center;
+/* padding-left: 0rem; 
+margin-bottom: 2rem;
+height: 14rem;
+justify-content: center;;
 /* text-align: center; */
 
 }
+
 
 
 .bloc-img-Auberge-La-Cannebiere{
@@ -694,16 +777,19 @@ margin-right: 5rem;
 
 .img-Auberge-La-Cannebiere{
     width: 100%;
-    height: 7rem;
+    height: 11rem;
 }
 
 .carte-Hotel-du-port{
-    width: 90vw;
+    width: 90%;
     display: flex;
+    min-height: 16rem;
+    justify-content: center;
     /* justify-content: center;
-    text-align: center; */
+    text-align: center; 
     padding-left: 0rem;
     margin-right: 5rem;
+    height: 14rem;*/
 
 }
 
@@ -719,16 +805,19 @@ margin-right: 5rem;
 
 .img-Hotel-du-port{
     width: 100%;
-    height: 7rem;
+    height: 11rem;
 }
 
 .carte-Hotel-Les-mouettes{
-    width: 90vw;
+    width: 90%;
     display: flex;
+    min-height: 16rem;
+    justify-content: center;
     /* justify-content: center;
-    text-align: center; */
+    text-align: center; 
     padding-left: 0rem;
     margin-right: 5rem;
+    height: 14rem;*/
 
 }
 
@@ -744,18 +833,20 @@ margin-right: 5rem;
 
 .img-Hotel-Les-mouettes{
     width: 100%;
-    height: 7rem;
+    height: 11rem;
 }
 
 .carte-Hotel-de-la-mer{
-    width: 90vw;
+    width: 90%;
     display: flex;
+    min-height: 16rem;
+    justify-content: center;
     /* justify-content: center;
-    text-align: center; */
+    text-align: center; 
     padding-left: 0rem;
     margin-right: 5rem;
+    height: 14rem;*/
 }
-
 
 .bloc-img-Hotel-de-la-mer{
     width: 80%;
@@ -768,16 +859,19 @@ margin-right: 5rem;
 
 .img-Hotel-de-la-mer{
     width: 100%;
-    height: 7rem;
+    height: 11rem;
 }
 
 .carte-Auberge-Le-Panier{
-    width: 90vw;
+    width: 90%;
     display: flex;
+    min-height: 16rem;
+    justify-content: center;
     /* justify-content: center;
-    text-align: center; */
+    text-align: center; 
     padding-left: 0rem;
     margin-right: 5rem;
+    height: 14rem;*/
 }
 
 
@@ -793,16 +887,19 @@ margin-right: 5rem;
 
 .img-carte-Auberge-Le-Panier{
     width: 100%;
-    height: 7rem;
+    height: 11rem;
 }
 
 .carte-Hotel-chez-Amina{
-    width: 90vw;
+    width: 90%;
     display: flex;
+    min-height: 16rem;
+    justify-content: center;
     /* justify-content: center;
-    text-align: center; */
+    text-align: center; 
     padding-left: 0rem;
     margin-right: 5rem;
+    height: 14rem;*/
 }
 
 
@@ -817,19 +914,29 @@ margin-right: 5rem;
 
 .img-Hotel-chez-Amina{
     width: 100%;
-    height: 7rem;
+    height: 11rem;
 }
 }
 
 
 
 /*bouton "AFFICHER PLUS*/
+
+.section-hebergements{
+    position:relative;
+}
+
 #afficher-plus{
     font-size: 1.2rem;
     font-weight: bold;
     border: none;
-    /* margin-top: 1rem; */
     /* margin-bottom: 2rem; */
+    background-color: none;
+    position: absolute;
+    bottom: 0.5rem;  /*bien aligné en absolute*/
+    
+    
+    
 }
 
 #afficher-plus:hover{
@@ -837,13 +944,16 @@ margin-right: 5rem;
 }
 
 
-@media screen and (max-width:760px){
-    #afficher-plus{
-        position: absolute;
-        left: 0rem;    /*placer "Afficher plus" à gauche*/
+@media screen and (max-width:950px) /*(max-width:1050px)*/ {
+    #afficher-plus{    /*placer "Afficher plus" à gauche*/
+        background-color: white;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
         
     }
 }
+
+
 /* FIN SECTION "HEBERGEMENTS" ET SECTION "LES PLUS POPULAIRES"*/
 
 
@@ -851,8 +961,17 @@ margin-right: 5rem;
 
 /* SECTION ACTIVITES */
 
-#activites{
+.activites-a-marseille{
+    font-weight: bold;
+    font-size: 1.1rem;
     margin-top: 2rem;
+    
+}
+
+#activites{
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    
 }
 
 .loisirs-a-marseille     /*aligner les éléments de la section Activités à Marseille*/
@@ -869,6 +988,7 @@ margin-right: 5rem;
     width: 100%;    /*largeur de l'image=100% de la carte-img-vieux-port*/
     height: 22rem;
     border-radius: 25px; /*arrondir les angles au bas de la carte*/
+    margin-bottom: 1rem;
 }
 
 .carte-img-vieux-port{    /*carte-img-vieux-port= image complète(photo+le dessous) */
@@ -882,6 +1002,7 @@ margin-right: 5rem;
     height: 80%;   /*l'image prend 80% de la carte*/
     width: 100%;
     overflow: hidden;  /*pour rogner une partie de l'image et y placer ensuite mon texte*/
+    
 }
 
 
@@ -898,6 +1019,7 @@ margin-right: 5rem;
     height: 80%;
     width: 100%; 
     overflow: hidden;
+    
 }   
 
 .img-Fort-de-Pomegues{
@@ -912,12 +1034,14 @@ margin-right: 5rem;
     height: 11rem;
     border-radius: 25px;
     box-shadow: 0 2px 0 0 rgb(248, 245, 242);
+    margin-bottom: 1rem;
 }
 
 .bloc-img-iles-du-frioul{
     height: 80%;
     width: 100%;
     overflow: hidden;
+
 }
 
 .img-iles-du-frioul{
@@ -925,6 +1049,7 @@ margin-right: 5rem;
     height: 10rem;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
+    
     
 }
 
@@ -941,6 +1066,7 @@ margin-right: 5rem;
     height: 80%;
     width: 100%;
     overflow: hidden;
+    
 } 
 
 .img-Parc-National-des-Calanques{
@@ -996,115 +1122,87 @@ margin-right: 5rem;
 }
 
 
-@media screen and (max-width:760px){         /*pour la section "ACTIVITES"*/
-    .activites-a-marseille{
-        text-align: center;
-        
+@media screen and (min-width:760px) and (max-width:1119px){
+    .Notre-dame-parc-longchamp{     /*pour que les 2 cartes se retrouvent alignés à l'horizontal*/
+        display: flex;
+        margin-top: 2rem;
+        flex-wrap: wrap;
     }
-    
-    
-    
+    .carte-Notre-Dame-de-la-Garde{
+        margin-right:4rem;
+    }
+}
+
+
+@media screen and (max-width:760px) {  /*(max-width:1050px)*/         /*pour la section "ACTIVITES"*/
+    .activites-a-marseille{
+        text-align: left;
+        /* margin: auto; */ 
+        font-size: 1.1rem;      
+  }
+ 
+    #activites{
+        text-align: center;
+    }
+
+
     .loisirs-a-marseille{
         display: flex;
         flex-direction: column;
-        margin-left: 3rem;
-        /* align-content: center; */
-        /* justify-content: space-between; */
         
     }
 
-    
-
-    .carte-img-vieux-port{
-        /* width: 16rem;
-        height: 14em; */
+    .carte{
+        margin: auto;
         width: 75vw;
-        margin-bottom: 2rem;
-        height: 9rem;
-        align-self: flex-start;  /*pour la replacer à gauche car cette image était décalée un peu sur la droite:*/
+        height: 13rem;
+        margin-bottom: 1rem;
     }
+
+    .bloc {
+        height: 70%;   /*l'image prend 70% de la carte*/
+        width: 100%;
+        overflow: hidden;  /*pour rogner une partie de l'image et y placer ensuite mon texte*/
+    }
+
     .img-vieux-port{
         width: 100%;
-        height: 8rem;
+        height: 10rem;
     }
 
-    
-
-    .carte-Parc-National-des-Calanques{
-        /* width: 16rem;
-        height: 14rem; */
-        width: 75vw;
-        margin-bottom: 2rem;
-        height: 9rem;
-        align-self: flex-start; /*pour la replacer à gauche car cette image était décalé un peu sur la droite*/
-    }
 
     .img-Parc-National-des-Calanques{
         width: 100%;
-        height: 8rem;
+        height: 10rem;
     }
-
-    .carte-Parc-Longchamp{
-        /* width: 16rem;
-        height: 14rem; */
-        margin-bottom: 2rem;
-        width: 75vw;
-        height: 9rem;
-    }   
 
     .img-Parc-Longchamp{
         width: 100%;
-        height: 8rem;
+        height: 10rem;
     }
-
-    .carte-Notre-Dame-de-la-Garde{
-        /* width: 16rem;
-        height: 14rem; */
-        margin-bottom: 2rem;
-        width: 75vw;
-        height: 9rem;
-        
-    } 
 
     .img-Notre-Dame-de-la-Garde{
         width: 100%;
-        height: 8rem; 
+        height: 10rem; 
     }
 
-
-
-    .carte-iles-du-frioul{
-        /* width: 16rem;
-        height: 11rem; */
-        margin-bottom: 2rem;
-        width: 75vw;
-        height: 9rem;
-    }  
     
     .img-iles-du-frioul{
         width: 100%;
-        height: 8rem;
-    }
-    
-    .carte-img-Fort-de-Pomegues{
-        /* width: 16rem;
-        height: 14rem; */
-        margin-bottom: 2rem;
-        width: 75vw;
-        height: 9rem;
+        height: 10rem;
     }
 
     .img-Fort-de-Pomegues{
         width: 100%;
-        height: 8rem; 
+        height: 10rem; 
     }
-}  
-
+}
 
 /* FOOTER */
 
 .lien-footer{
     color: black;
+    /* margin: auto; */
 
     
 }
@@ -1116,18 +1214,21 @@ footer a:hover{
 
 footer{
     display: flex;
-    justify-content: space-around;
     margin-top: 2rem;
     margin-bottom: 0rem;
     background-color: #F2F2F2;
-    width: 100vw;
+    width:100vw;
     
+    
+    
+   
 }
 
 .liste{
     display: flex;
     flex-direction: column;
     /* justify-content: space-around; */
+    margin-right: 10rem;
     
 }
 
@@ -1141,6 +1242,7 @@ footer{
    footer{
        display: flex;
        flex-direction: column;
+       padding-left: 3rem;
         
       
    } 

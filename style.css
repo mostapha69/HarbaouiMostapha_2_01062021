@@ -83,6 +83,7 @@ a:hover /*liens au survol*/
         /* justify-self: center; */
         text-align: center;
         margin-right: 0rem;
+
     }
    
     .activites{
@@ -99,6 +100,7 @@ a:hover /*liens au survol*/
     a /*liens par défauts non survolés*/
 {
     text-decoration:none;
+    width:50vw;
 }
 
 a:hover /*liens au survol*/
@@ -107,6 +109,7 @@ a:hover /*liens au survol*/
     color: #0065FC;
     font-weight: bold;
 }
+
 
 
 }    
@@ -176,6 +179,7 @@ h1 + div{    /*selectionne la div qui vient juste après le h1*/
     font-weight: bold;
     text-decoration: black;
     
+    
 }
 
 
@@ -186,7 +190,7 @@ h1 + div{    /*selectionne la div qui vient juste après le h1*/
 
 .filtres{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
     width: 70%;  /*70% de la largeur*/
     font-weight: bold;
@@ -221,7 +225,7 @@ span:hover{         /*seulement pour que ça change d'effet au survol / ce n'est
     font-weight: bold;
     font-size: 1.1rem;
     align-self: center;
-    /* justify-content: flex-start ;   pour que "filtres"soit bien aligné sur la même ligne */
+     justify-content: flex-start ;   /*pour que "filtres"soit bien aligné sur la même ligne */
 }
 
 .eco-famille{
@@ -278,6 +282,7 @@ span:hover{         /*seulement pour que ça change d'effet au survol / ce n'est
 }
 
 
+
 /*TEXTE EN-DESSOUS DU MENU "Filtres"*/
 
 #logements-disponibles{
@@ -307,6 +312,30 @@ span:hover{         /*seulement pour que ça change d'effet au survol / ce n'est
 
 .etoile{
     color: #0065FC;
+}
+
+.etoile-Auberge-Le-Panier{
+    color: #F2F2F2;
+}
+
+.etoile-Hotel-de-la-mer{
+    color: #F2F2F2;
+}
+
+.etoile-Hotel-Les-mouettes{
+    color: #F2F2F2;
+}
+
+.etoile-Auberge-La-Cannebiere{
+    color: #F2F2F2;
+}
+
+.etoile-au-coeur-de-leau{
+    color: #F2F2F2;
+}
+
+.etoile-tout-bleu-et-blanc{
+    color: #F2F2F2;
 }
 
 div img{
@@ -444,7 +473,13 @@ div img{
 
 .petit-titre{
     font-weight: bold;
+    margin-bottom: 0.2rem;
 }
+
+.prix{
+    margin-bottom: 0.2rem;
+}
+
 
 .carte-le-soleil-du-matin{
     width: 90%; /*prend 90% de la largeur*/
@@ -459,7 +494,7 @@ div img{
 
 
 .bloc-img-le-soleil-du-matin{
-    width: 100%;
+    width: 80%;
     overflow: hidden;
     border-radius: 25px;
     
@@ -547,12 +582,14 @@ border-radius: 25px;
 }
 
 #hebergements{  /*titre hebergements à Marseille*/
-        margin-left: 2rem;
+        margin-left: 3rem;
+        
 }
 
 
     .section-populaires{
         width: 100vw;   /*section populaire prend toute la largeur de la fenêtre.backgroun-color:#F2F2F2(gris) prend donc toute la largeur*/    
+        font-size:1rem;
     }
 } 
     
@@ -740,6 +777,58 @@ border-radius: 25px;
         height: 6rem;
     }
 
+    @media screen and (min-width:1050px){
+        .carte-Auberge-La-Cannebiere{
+            height:7rem;
+        }
+        
+        .carte-Hotel-du-port{
+            height:7rem;
+        }
+
+        .carte-Hotel-Les-mouettes{
+            height:7rem;
+        }
+        .carte-Hotel-de-la-mer{
+            height:7rem;
+            margin-top: 7rem;
+        }
+        .carte-Auberge-Le-Panier{
+            height:7rem;
+            margin-top:7rem;
+        }
+        .carte-Hotel-chez-Amina{
+            height:7rem;
+            margin-top: 7rem;
+        }
+
+
+
+        .img-Auberge-La-Cannebiere{
+            height: 8rem;
+        }
+        .img-Hotel-du-port{
+            height: 8rem;
+        }
+
+        .img-Hotel-Les-mouettes{
+            height: 8rem;
+        }
+
+        .img-Hotel-de-la-mer{
+
+            height: 8rem;
+        }
+
+        .img-carte-Auberge-Le-Panier{
+            height: 8rem;
+        }
+
+        .img-Hotel-chez-Amina{
+            height: 8rem;
+        }
+
+    }
 
 
 /*cartes images de la section hébergements @media screen and (max-width:760px)*/

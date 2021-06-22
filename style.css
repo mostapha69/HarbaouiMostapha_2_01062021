@@ -58,7 +58,7 @@ a:hover /*liens au survol*/
     font-weight: bold;
 }
 
-
+/*MEDIA SCREEN HEADER*/
 @media screen and (max-width:760px) {
     header{ 
         display: flex;
@@ -109,18 +109,14 @@ a:hover /*liens au survol*/
     color: #0065FC;
     font-weight: bold;
 }
-
-
-
 }    
 
 
 /* FIN de @media screen and (max-width:760px) pour HEADER */
 
-
-
-
 /* Fin HEADER */
+
+
 
 /*TEXTE EN-DESSOUS DU HEADER*/ 
 
@@ -153,13 +149,8 @@ h1 + div{    /*selectionne la div qui vient juste après le h1*/
 .iconmap{
     height: 1.5rem;
     align-self: center;  /*pour que l'icône "map" soit bien alignée sur la même ligne */
-    /* justify-self: center; */
     padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    
-    
-
-    
+    padding-right: 0.5rem;    
 }
 
 .bouton-rechercher{
@@ -170,16 +161,12 @@ h1 + div{    /*selectionne la div qui vient juste après le h1*/
     border: 1px solid #F2F2F2;
     border-radius: 0px 25px 25px 0px;  /*bordures arrondies seulement à droite*/
     font-size: 1.2rem;
-    
-
 }
 
 .search{
     border: 1px solid #F2F2F2;
     font-weight: bold;
-    text-decoration: black;
-    
-    
+    text-decoration: black;   
 }
 
 
@@ -194,8 +181,6 @@ h1 + div{    /*selectionne la div qui vient juste après le h1*/
     flex-wrap: wrap;
     width: 70%;  /*70% de la largeur*/
     font-weight: bold;
-    /* margin-top: 2rem;
-    margin-bottom: 2rem; */
     font-size: 1rem;
     /* margin: auto; */
 
@@ -225,7 +210,7 @@ span:hover{         /*seulement pour que ça change d'effet au survol / ce n'est
     font-weight: bold;
     font-size: 1.1rem;
     align-self: center;
-     justify-content: flex-start ;   /*pour que "filtres"soit bien aligné sur la même ligne */
+     /*justify-content: flex-start ;   pour que "filtres"soit bien aligné sur la même ligne */
 }
 
 .eco-famille{
@@ -1015,10 +1000,7 @@ justify-content: center;;
     /* margin-bottom: 2rem; */
     background-color: none;
     position: absolute;
-    bottom: 0.5rem;  /*bien aligné en absolute*/
-    
-    
-    
+    bottom: 0.5rem;  /*bien aligné en absolute*/   
 }
 
 #afficher-plus:hover{
@@ -1026,7 +1008,7 @@ justify-content: center;;
 }
 
 
-@media screen and (max-width:950px) /*(max-width:1050px)*/ {
+@media screen and (max-width:950px) {
     #afficher-plus{    /*placer "Afficher plus" à gauche*/
         background-color: white;
         margin-top: 1rem;
@@ -1205,7 +1187,7 @@ justify-content: center;;
     border-radius: 25px; 
 }
 
-
+/* MEDIA SCREEN SECTION ACTIVITES */
 @media screen and (min-width:760px) and (max-width:1119px){
     .Notre-dame-parc-longchamp{     /*pour que les 2 cartes se retrouvent alignés à l'horizontal*/
         display: flex;
@@ -1225,23 +1207,20 @@ justify-content: center;;
         font-size: 1.1rem;      
   }
  
-
-
-
     .loisirs-a-marseille{
         display: flex;
         flex-direction: column;
         
     }
 
-    .carte{
+    .carte{     /*class pour toutes les cartes Section Activités*/
         margin: auto;
         width: 75vw;
         height: 13rem;
         margin-bottom: 1rem;
     }
 
-    .bloc {
+    .bloc {     /*class pour tous les blocs-img de toutes les cartes*/
         height: 70%;   /*l'image prend 70% de la carte*/
         width: 100%;
         overflow: hidden;  /*pour rogner une partie de l'image et y placer ensuite mon texte*/
@@ -1280,18 +1259,17 @@ justify-content: center;;
     }
 }
 
+/*FIN SECTION ACTIVITES*/
+
 /* FOOTER */
 
 .lien-footer{
     color: black;
-    /* margin: auto; */
-
-    
+    /* margin: auto; */   
 }
 
 footer a:hover{
     text-decoration: none;
-    color: brown;
 }
 
 footer{
@@ -1299,11 +1277,7 @@ footer{
     margin-top: 2rem;
     margin-bottom: 0rem;
     background-color: #F2F2F2;
-    width:100%;
-    
-    
-    
-   
+    width:100%; 
 }
 
 .liste{

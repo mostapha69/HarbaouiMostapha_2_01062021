@@ -101,13 +101,20 @@ a:hover /*liens au survol*/
 {
     text-decoration:none;
     width:50vw;
+
 }
 
-a:hover /*liens au survol*/
+a:hover{
+    text-decoration: none;
+}
+
+.menu:hover /*liens au survol*/
 {
-    text-decoration: underline;
+    text-decoration: none; 
     color: #0065FC;
     font-weight: bold;
+    border-color: #0065FC;
+
 }
 }    
 
@@ -202,8 +209,13 @@ h1 + div{    /*selectionne la div qui vient juste après le h1*/
     /* height: 2rem; */
 }
 
-span:hover{         /*seulement pour que ça change d'effet au survol / ce n'est pas un lien*/
+.lien-filtre{
+    color: black;
+}
+.lien-filtre:hover{         /*seulement pour que ça change d'effet au survol / ce n'est pas un lien*/
+    text-decoration:none;
     color: #0065FC;
+    
 }
 
 #trier{
@@ -816,21 +828,14 @@ border-radius: 25px;
     }
 
 
-/*cartes images de la section hébergements @media screen and (max-width:760px)*/
- @media screen and (max-width:950px) /*and  (min-width:370px)*/  { 
+/*cartes images de la section hébergements @media screen and (max-width:950px)*/
+ @media screen and (max-width:950px){ 
 .carte-Auberge-La-Cannebiere{
 width: 90%;
 display: flex;
 min-height: 16rem;
 justify-content: center;
-/* padding-left: 0rem; 
-margin-bottom: 2rem;
-height: 14rem;
-justify-content: center;;
-/* text-align: center; */
-
 }
-
 
 
 .bloc-img-Auberge-La-Cannebiere{
@@ -839,7 +844,6 @@ justify-content: center;;
     background-color:white;
     border-radius: 25px;
     box-shadow: 0rem 0.2rem 0rem 0rem #F2F2F2;  /*ombre seulement en bas de l'image*/
-
 }
 
 .img-Auberge-La-Cannebiere{
@@ -852,12 +856,6 @@ justify-content: center;;
     display: flex;
     min-height: 16rem;
     justify-content: center;
-    /* justify-content: center;
-    text-align: center; 
-    padding-left: 0rem;
-    margin-right: 5rem;
-    height: 14rem;*/
-
 }
 
 
@@ -868,8 +866,6 @@ justify-content: center;;
     border-radius: 25px;
     box-shadow: 0rem 0.2rem 0rem 0rem #F2F2F2;
 }
-
-
 .img-Hotel-du-port{
     width: 100%;
     height: 11rem;
@@ -880,14 +876,7 @@ justify-content: center;;
     display: flex;
     min-height: 16rem;
     justify-content: center;
-    /* justify-content: center;
-    text-align: center; 
-    padding-left: 0rem;
-    margin-right: 5rem;
-    height: 14rem;*/
-
 }
-
 
 .bloc-img-Hotel-Les-mouettes{
     width: 80%;
@@ -896,7 +885,6 @@ justify-content: center;;
     border-radius: 25px;
     box-shadow: 0rem 0.2rem 0rem 0rem #F2F2F2;
 }
-
 
 .img-Hotel-Les-mouettes{
     width: 100%;
@@ -908,11 +896,6 @@ justify-content: center;;
     display: flex;
     min-height: 16rem;
     justify-content: center;
-    /* justify-content: center;
-    text-align: center; 
-    padding-left: 0rem;
-    margin-right: 5rem;
-    height: 14rem;*/
 }
 
 .bloc-img-Hotel-de-la-mer{
@@ -922,7 +905,6 @@ justify-content: center;;
     border-radius: 25px;
     box-shadow: 0rem 0.2rem 0rem 0rem #F2F2F2;
 }
-
 
 .img-Hotel-de-la-mer{
     width: 100%;
@@ -934,11 +916,6 @@ justify-content: center;;
     display: flex;
     min-height: 16rem;
     justify-content: center;
-    /* justify-content: center;
-    text-align: center; 
-    padding-left: 0rem;
-    margin-right: 5rem;
-    height: 14rem;*/
 }
 
 
@@ -951,7 +928,6 @@ justify-content: center;;
     box-shadow: 0rem 0.2rem 0rem 0rem #F2F2F2;
 }
 
-
 .img-carte-Auberge-Le-Panier{
     width: 100%;
     height: 11rem;
@@ -962,11 +938,6 @@ justify-content: center;;
     display: flex;
     min-height: 16rem;
     justify-content: center;
-    /* justify-content: center;
-    text-align: center; 
-    padding-left: 0rem;
-    margin-right: 5rem;
-    height: 14rem;*/
 }
 
 
@@ -997,7 +968,6 @@ justify-content: center;;
     font-size: 1.2rem;
     font-weight: bold;
     border: none;
-    /* margin-bottom: 2rem; */
     background-color: none;
     position: absolute;
     bottom: 0.5rem;  /*bien aligné en absolute*/   

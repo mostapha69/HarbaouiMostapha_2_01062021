@@ -1117,8 +1117,7 @@ justify-content: center;
 .img-Notre-Dame-de-la-Garde{
     width: 100%;
     height: 10rem;
-    border-radius: 25px;
-    
+    border-radius: 25px 25px 0 0;   /*arrondi en haut à gauche et en haut à droite de l'image*/ 
 }
 
 
@@ -1139,7 +1138,8 @@ justify-content: center;
 .img-Parc-Longchamp{
     width: 100%;
     height: 10rem;  
-    border-radius: 25px; 
+    border-radius: 25px 25px 0 0;   /*arrondi en haut à gauche et en haut à droite de l'image*/ 
+
 }
 
 /* MEDIA SCREEN SECTION ACTIVITES */

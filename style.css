@@ -39,9 +39,7 @@ header{
 header div img{
     height: 1.5rem;
     width: 5rem;
-    /* position: absolute; /*positionner en "absolute" logo à gauche*/
-    /* left: 1rem; */ 
-    position: absolute;
+    position: absolute;  /* position: absolute; /*positionner en "absolute" logo à gauche*/
     left:0.5rem;
     
 }
@@ -62,8 +60,6 @@ a:hover /*liens au survol*/
 @media screen and (max-width:760px) {
     header{ 
         display: flex;
-        /* justify-content: ;
-        flex-wrap: wrap; */
         height: 4rem;
         margin-bottom: 2rem;
         
@@ -80,7 +76,6 @@ a:hover /*liens au survol*/
 
     .hebergements{
         width: 50vw; /*largeur de l'élément "hebergements" 50% de la fenêtre*/
-        /* justify-self: center; */
         text-align: center;
         margin-right: 0rem;
 
@@ -160,7 +155,7 @@ h1 + div{    /*selectionne la div qui vient juste après le h1*/
     padding-right: 0.5rem;    
 }
 
-.bouton-rechercher{
+.bouton-rechercher{   /*bouton "rechercher qui est tout à droite*/
     height: 3rem;
     background-color: #0065FC;
     color: white;
@@ -170,7 +165,7 @@ h1 + div{    /*selectionne la div qui vient juste après le h1*/
     font-size: 1.2rem;
 }
 
-.search{
+.search{            /*barre de recherche où on insère le texte*/
     border: 1px solid #F2F2F2;
     font-weight: bold;
     text-decoration: black;   
@@ -189,7 +184,7 @@ h1 + div{    /*selectionne la div qui vient juste après le h1*/
     width: 70%;  /*70% de la largeur*/
     font-weight: bold;
     font-size: 1rem;
-    /* margin: auto; */
+    
 
 }
 
@@ -206,10 +201,10 @@ h1 + div{    /*selectionne la div qui vient juste après le h1*/
 .ajuster{
     border: 0.2rem solid #F2F2F2;
     border-radius: 25px;
-    /* height: 2rem; */
+    
 }
 
-.lien-filtre{
+.lien-filtre{       /*class pour les 4 filtres"economique, familial ...*/
     color: black;
 }
 .lien-filtre:hover{         /*seulement pour que ça change d'effet au survol / ce n'est pas un lien*/
@@ -222,25 +217,20 @@ h1 + div{    /*selectionne la div qui vient juste après le h1*/
     font-weight: bold;
     font-size: 1.1rem;
     align-self: center;
-     /*justify-content: flex-start ;   pour que "filtres"soit bien aligné sur la même ligne */
 }
 
 .eco-famille{
-    display: flex; /* "economique" et "familial" restent alignés sur la même ligne*/
+    display: flex; /* "economique" et "familial" restent alignés sur la même ligne meme*/
     justify-content: space-between;
     width:20rem;  /*pour que "economique" et "familial" ne soient pas collés*/
     max-width: 320px;
 }
 
 @media screen and (min-width:1500px){
-    .eco-famille{
+    .eco-famille{    /*"economique" et "familial" ne sont pas trop éloignés*/
     width:23rem;
 }
 }
-
-
-
-
 
 @media screen and (max-width:760px) {
     .filtres{
@@ -248,12 +238,6 @@ h1 + div{    /*selectionne la div qui vient juste après le h1*/
         flex-direction: column;
         flex-wrap: wrap;
     }
-
-
-    .eco-famille{
-        display: flex;
-        
-    } 
 
     #trier{
          margin-bottom: 1rem;
@@ -484,9 +468,7 @@ div img{
     background-color: white;
     border-radius: 25px;
     border: 0.2rem solid white;
-    
-        
-    
+    box-shadow: 0 0 10px 0 rgb(0 0 0 / 10%);   
 }
 
 
@@ -505,10 +487,7 @@ div img{
     background-color: white;
     border-radius: 25px;
     border: 0.2rem solid white;
-    
-
-    
-
+    box-shadow: 0 0 10px 0 rgb(0 0 0 / 10%);
 }
 
 .bloc-img-au-coeur-de-leau{
@@ -526,7 +505,7 @@ div img{
     background-color: white;
     border-radius: 25px;
     border: 0.2rem solid white;
-
+    box-shadow: 0 0 10px 0 rgb(0 0 0 / 10%);
 }
 
 
@@ -657,6 +636,7 @@ border-radius: 25px;
         background-color:white;
         border-radius: 25px;
         border: 0.2rem solid white;
+        box-shadow: 0 0 10px 0 rgb(0 0 0 / 10%);
     }
     
 .img-Auberge-La-Cannebiere{
@@ -679,6 +659,7 @@ border-radius: 25px;
         background-color:white;
         border-radius: 25px;
         border: 0.2rem solid white;
+        box-shadow: 0 0 10px 0 rgb(0 0 0 / 10%);
     }
     
     
@@ -700,6 +681,7 @@ border-radius: 25px;
         background-color:white;
         border-radius: 25px;
         border: 0.2rem solid white;
+        box-shadow: 0 0 10px 0 rgb(0 0 0 / 10%);
     }
     
     
@@ -721,6 +703,7 @@ border-radius: 25px;
         background-color:white;
         border-radius: 25px;
         border: 0.2rem solid white;
+        box-shadow: 0 0 10px 0 rgb(0 0 0 / 10%);
     }
     
     
@@ -744,6 +727,7 @@ border-radius: 25px;
         background-color:white;
         border-radius: 25px;
         border: 0.2rem solid white;
+        box-shadow: 0 0 10px 0 rgb(0 0 0 / 10%);
     }
     
     
@@ -766,6 +750,7 @@ border-radius: 25px;
         background-color:white;
         border-radius: 25px;
         border: 0.2rem solid white;
+        box-shadow: 0 0 10px 0 rgb(0 0 0 / 10%);
     }
     
     
@@ -1031,7 +1016,7 @@ justify-content: center;
     width: 16rem;
     height: 25rem;
     border-radius: 25px;        /*arrondir les angles en bas de la carte*/
-    box-shadow: 0 2px 0 0 rgb(248, 245, 242);  /*ombre en bas de la carte*/
+    box-shadow: 0 0 10px 0 rgb(0 0 0 / 10%); 
 }
 
 .bloc-img-vieux-port{
@@ -1047,7 +1032,7 @@ justify-content: center;
     height: 13rem;
     border-radius: 25px;    /*arrondir les angles*/
     margin-bottom: 1rem;
-    box-shadow: 0 2px 0 0 rgb(248, 245, 242);
+    box-shadow: 0 0 10px 0 rgb(0 0 0 / 10%);
 
 }
 
@@ -1069,7 +1054,7 @@ justify-content: center;
     width: 16rem;
     height: 11rem;
     border-radius: 25px;
-    box-shadow: 0 2px 0 0 rgb(248, 245, 242);
+    box-shadow: 0 0 10px 0 rgb(0 0 0 / 10%);
     margin-bottom: 1rem;
 }
 
@@ -1095,7 +1080,7 @@ justify-content: center;
     width: 16rem;
     height: 25rem;
     border-radius: 25px;
-    box-shadow: 0 2px 0 0 rgb(248, 245, 242);
+    box-shadow: 0 0 10px 0 rgb(0 0 0 / 10%);
 }
 
 .bloc-img-Parc-National-des-Calanques{
@@ -1120,7 +1105,7 @@ justify-content: center;
     border-radius: 25px;
     /* background-color: blue; */
     margin-bottom: 1rem;
-    box-shadow: 0 2px 0 0 rgb(248, 245, 242);
+    box-shadow: 0 0 10px 0 rgb(0 0 0 / 10%);
 }
 
 .bloc-img-Notre-Dame-de-la-Garde{
@@ -1142,7 +1127,7 @@ justify-content: center;
     height: 12rem;
     border-radius: 25px;
     /* background-color: blue; */
-    box-shadow: 0 2px 0 0 rgb(248, 245, 242);
+    box-shadow: 0 0 10PX 0 rgb(0 0 0 / 10%);
 }
 
 .bloc-img-Parc-Longchamp{

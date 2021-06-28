@@ -8,7 +8,7 @@ body{
 
 
 /*HEADER*/
-header{
+nav{
     display: flex;
     justify-content: flex-end;   /*mettre tout le header à droite*/
     height: 4rem;
@@ -39,7 +39,7 @@ header{
 header div img{
     height: 1.5rem;
     width: 5rem;
-    position: absolute;  /* position: absolute; /*positionner en "absolute" logo à gauche*/
+    position: absolute;  /*positionner en "absolute" logo à gauche*/
     left:0.5rem;
     
 }
@@ -58,7 +58,7 @@ a:hover /*liens au survol*/
 
 /*MEDIA SCREEN HEADER*/
 @media screen and (max-width:760px) {
-    header{ 
+    nav{ 
         display: flex;
         height: 4rem;
         margin-bottom: 2rem;
@@ -165,13 +165,36 @@ h1 + div{    /*selectionne la div qui vient juste après le h1*/
     font-size: 1.2rem;
 }
 
+#loupe{
+    display: none;
+}
+
 .search{            /*barre de recherche où on insère le texte*/
     border: 1px solid #F2F2F2;
     font-weight: bold;
     text-decoration: black;   
 }
 
+@media screen and (max-width:600px){
+    #loupe{
+        background-color: #0065FC;
+        color: white;
+        border-radius: 10px;
+        display: flex;
+        width: 35px;
+        padding-top: 14px;
+        padding-left: 10px;
+        padding-bottom:5px;
+        padding-right: 10px;
+        font-size: 0.7rem;
+        height:20px;
+        
+    }
 
+    .bouton-rechercher{
+        display: none;
+    }
+}
 
 
 
@@ -331,6 +354,7 @@ div img{
     margin-right: 2rem;
     margin-bottom: 2rem;
     max-width: 860px;
+    border-radius: 0 25px 25px 0;
     
     
     
@@ -342,7 +366,7 @@ div img{
     width: 33vw;  /* largeur de la section  NB: permet d'agrandir ou rétrécir les cartes en même temps*/
     /* align-content: center; */
     margin-bottom: 2rem; 
-    
+    border-radius:  25px 0 0 25px;
     
     
 }
@@ -391,9 +415,10 @@ div img{
 }   */ 
 
 
-.agencement{    
+.agencement{    /*class chaque carte "Hebergements à Marseille"*/
     width: 18rem;
-     height:12rem; 
+    height:12rem; 
+    cursor: pointer;
 } 
 
 
@@ -418,13 +443,15 @@ div img{
 }
 
 
-.hotel{
+.hotel{     /*class de chaque carte "Les plus populaires"*/
     display: flex;
     /* margin-right: 1rem;      */
     margin: auto;
     width: 90%; /*chaque carte= 80% de la largeur de la section*/
     /* height: 7rem;  */
     max-width: 90%;
+    cursor: pointer;
+
 }
 
 .organiser{
@@ -960,6 +987,7 @@ justify-content: center;
 
 #afficher-plus:hover{
     text-decoration: underline;
+    cursor: pointer;
 }
 
 
@@ -987,6 +1015,10 @@ justify-content: center;
     font-size: 1.1rem;
     margin-top: 2rem;
     
+}
+
+.carte{
+    cursor: pointer;
 }
 
 #activites{

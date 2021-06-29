@@ -244,8 +244,17 @@ h1 + div{    /*selectionne la div qui vient juste après le h1*/
     color: #0065FC;
     margin-right: 1rem;
     background-color: #DEEBFF;
-    border-radius: 50%;   /*pour faire un cercle*/
-    font-size: 1.5rem;  /*agrandir les îcones*/
+    border-radius: 50%;    /*faire un cercle*/
+    font-size: 19px;    /*taille des icônes*/
+    padding-top: 11px;
+    padding-left: 11px;
+    padding-right: 10px;
+    padding-bottom: 6px;
+    margin-left: -3px;
+    height: 24px;
+    width: 23px;
+    margin-top: -1px;
+    margin-bottom: -2px;
     
 }
     
@@ -257,6 +266,7 @@ h1 + div{    /*selectionne la div qui vient juste après le h1*/
 
 .lien-filtre{       /*class pour les 4 filtres"economique, familial ...*/
     color: black;
+    margin-right:1rem;
 }
 .lien-filtre:hover{         /*seulement pour que ça change d'effet au survol / ce n'est pas un lien*/
     text-decoration:none;
@@ -273,8 +283,8 @@ h1 + div{    /*selectionne la div qui vient juste après le h1*/
 .eco-famille{
     display: flex; /* "economique" et "familial" restent alignés sur la même ligne meme*/
     justify-content: space-between;
-    width:20rem;  /*pour que "economique" et "familial" ne soient pas collés*/
-    max-width: 320px;
+    width:22rem;  /*pour que "economique" et "familial" ne soient pas collés*/
+    max-width: 350px;  /*pour que "economique" et "familial" ne soient pas trop éloignés*/
 }
 
 @media screen and (min-width:1500px){
@@ -283,7 +293,7 @@ h1 + div{    /*selectionne la div qui vient juste après le h1*/
 }
 }
 
-@media screen and (max-width:760px) {
+@media screen and (max-width:550px) {
     .filtres{
         display: flex;
         flex-direction: column;
@@ -356,11 +366,15 @@ h1 + div{    /*selectionne la div qui vient juste après le h1*/
 }
 
 #icone-info{
-    margin-right: 1rem;
+    margin-right: 5px;
+    border: 0.1rem solid #F2F2F2;
+    border-radius: 50%;
+    margin-top:-6px;
 }
 
 .fa-info{
     color: #0065FC;
+    margin:5px;  /*écart entre icône et bordure*/
 }
 
 

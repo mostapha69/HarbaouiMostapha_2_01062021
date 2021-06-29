@@ -31,7 +31,6 @@ nav{
 
 .inscriptions{
     margin-left: 1rem;
-    margin-right: -1rem;
     font-weight: bold;
     color: #0065FC;
 }
@@ -386,6 +385,10 @@ h1 + div{    /*selectionne la div qui vient juste après le h1*/
     justify-content: space-between;
 }
 
+.fa-star {
+    font-size: small;
+    margin: -1px;
+}
 .etoile{
     color: #0065FC;
 }
@@ -547,17 +550,17 @@ div img{
     display: flex;
     /* margin-right: 1rem;      */
     /* margin: auto; */
-    width: 93%; /*chaque carte= 80% de la largeur de la section*/
+    width: 91%; /* % largeur de la section*/
     /* height: 7rem;  */
     /* max-width: 90%; */
     cursor: pointer;
-    margin-left: 0.5rem;
+    margin-left: 15px;
     font-size: 0.9rem;
     background-color: white;
     border-radius: 25px;
     margin-bottom: 1rem;
-    border: 0.2rem solid white;
-    box-shadow: 0 0 10px 0 rgb (0 0 0 / 10%);
+    border: 0.1rem solid white;
+    box-shadow: 0 0 10px 0 rgb(0 0 0 / 10%);
 }
 
 .organiser{
@@ -692,7 +695,7 @@ border-radius: 25px;
 }
 
 #hebergements{  /*titre hebergements à Marseille*/
-        margin-left: 3rem;
+        margin-left: 2rem;
         
 }
 
@@ -950,129 +953,142 @@ border-radius: 25px;
 
 /*cartes images de la section hébergements @media screen and (max-width:950px)*/
  @media screen and (max-width:950px){ 
+
+.agencement{
+    margin-left: 29px;
+}
+
 .carte-Auberge-La-Cannebiere{
-width: 90%;
-display: flex;
-min-height: 16rem;
-justify-content: center;
+    width: 350px;
+    display: flex;
+    /* min-height: 16rem; */
+    justify-content: center;
+    height: 13rem;
+    
 }
 
 
 .bloc-img-Auberge-La-Cannebiere{
-    width: 80%;
     overflow: hidden;
     background-color:white;
     border-radius: 25px;
     box-shadow: 0rem 0.2rem 0rem 0rem #F2F2F2;  /*ombre seulement en bas de l'image*/
+    width: 100%;
 }
 
 .img-Auberge-La-Cannebiere{
     width: 100%;
-    height: 11rem;
+    height: 8rem;
 }
 
 .carte-Hotel-du-port{
-    width: 90%;
+    width: 350px;
     display: flex;
-    min-height: 16rem;
+    /* min-height: 16rem; */
     justify-content: center;
+    height: 13rem;
+    
 }
 
 
 .bloc-img-Hotel-du-port{
-    width: 80%;
     overflow: hidden;
     background-color:white;
     border-radius: 25px;
     box-shadow: 0rem 0.2rem 0rem 0rem #F2F2F2;
+    width: 100%;
 }
 .img-Hotel-du-port{
     width: 100%;
-    height: 11rem;
+    height: 8rem;
 }
 
 .carte-Hotel-Les-mouettes{
-    width: 90%;
+    width: 350px;
     display: flex;
-    min-height: 16rem;
+    /* min-height: 16rem; */
     justify-content: center;
+    height: 13rem;
 }
 
 .bloc-img-Hotel-Les-mouettes{
-    width: 80%;
     overflow: hidden;
     background-color:white;
     border-radius: 25px;
     box-shadow: 0rem 0.2rem 0rem 0rem #F2F2F2;
+    width: 100%;
 }
 
 .img-Hotel-Les-mouettes{
     width: 100%;
-    height: 11rem;
+    height: 8rem;
 }
 
 .carte-Hotel-de-la-mer{
-    width: 90%;
+    width: 350px;
     display: flex;
-    min-height: 16rem;
+    /* min-height: 16rem; */
     justify-content: center;
+    height: 13rem;
 }
 
 .bloc-img-Hotel-de-la-mer{
-    width: 80%;
     overflow: hidden;
     background-color:white;
     border-radius: 25px;
     box-shadow: 0rem 0.2rem 0rem 0rem #F2F2F2;
+    width: 100%;
 }
 
 .img-Hotel-de-la-mer{
     width: 100%;
-    height: 11rem;
+    height: 8rem;
 }
 
 .carte-Auberge-Le-Panier{
-    width: 90%;
+    width: 350px;
     display: flex;
-    min-height: 16rem;
+    /* min-height: 16rem; */
     justify-content: center;
+    height: 13rem;
 }
 
 
 
 .bloc-img-carte-Auberge-Le-Panier{
-    width: 80%;
     overflow: hidden;
     background-color:white;
     border-radius: 25px;
     box-shadow: 0rem 0.2rem 0rem 0rem #F2F2F2;
+    width: 100%;
 }
 
 .img-carte-Auberge-Le-Panier{
     width: 100%;
-    height: 11rem;
+    height: 8rem;
 }
 
 .carte-Hotel-chez-Amina{
-    width: 90%;
+    width: 350px;
     display: flex;
-    min-height: 16rem;
+    /* min-height: 16rem; */
     justify-content: center;
+    height: 13rem;
 }
 
 
 .bloc-img-Hotel-chez-Amina{
-    width: 80%;
     overflow: hidden;
     background-color:white;
     border-radius: 25px;
     box-shadow: 0rem 0.2rem 0rem 0rem #F2F2F2;
+    width: 100%;
 }
 
 
 .img-Hotel-chez-Amina{
     width: 100%;
-    height: 11rem;
+    height: 8rem;
 }
 }
 
@@ -1105,7 +1121,7 @@ justify-content: center;
         margin-top: 1rem;
         margin-bottom: 2rem;
         position: relative;
-        padding-left: 1rem;
+        margin-left: 2rem;
         
     }
 }

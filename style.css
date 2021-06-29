@@ -361,7 +361,7 @@ h1 + div{    /*selectionne la div qui vient juste après le h1*/
     display: flex;
     margin-bottom: 2rem;
     margin-top: 1rem;
-    font-size: 0.8rem;
+    font-size: 1rem;
     
 }
 
@@ -439,15 +439,41 @@ div img{
     /* align-content: center; */
     margin-bottom: 2rem; 
     border-radius:  25px 0 0 25px;
-    
-    
+    /* position:relative; */
+}   
+/*.titre-populaire{
+    position: absolute;
+    /* left:1rem;
+    margin-bottom: 1rem; 
 }
+
+.iconcourbe{
+    position: absolute;
+     right:1rem; 
+}*/
+
 @media screen and (min-width:1400px){
     .section-populaires{
     max-width: 480px;
 }
 }
  
+/* @media screen and (max-width:450px){
+    .titre-icone {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 1rem;
+        margin-right: 1rem;
+}
+}
+
+
+@media screen and (min-width:451px) {
+    .titre-icone {
+        display: flex;
+        justify-content: space-around;
+}
+} */
 /* .logements-populaires div img{
     width: 12rem;
     height: 8rem;
@@ -498,7 +524,9 @@ div img{
 
 .titre-icone{     /*titre + icône de la section "les plus populaires*/
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .iconcourbe{
@@ -511,19 +539,25 @@ div img{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;  /*espaces entre les cartes*/
-    margin-left: 0.5rem;
+    /* margin-left: 0.5rem; */
 }
 
 
 .hotel{     /*class de chaque carte "Les plus populaires"*/
     display: flex;
     /* margin-right: 1rem;      */
-    margin: auto;
-    width: 90%; /*chaque carte= 80% de la largeur de la section*/
+    /* margin: auto; */
+    width: 93%; /*chaque carte= 80% de la largeur de la section*/
     /* height: 7rem;  */
-    max-width: 90%;
+    /* max-width: 90%; */
     cursor: pointer;
-
+    margin-left: 0.5rem;
+    font-size: 0.9rem;
+    background-color: white;
+    border-radius: 25px;
+    margin-bottom: 1rem;
+    border: 0.2rem solid white;
+    box-shadow: 0 0 10px 0 rgb (0 0 0 / 10%);
 }
 
 .organiser{
@@ -561,14 +595,14 @@ div img{
 }
 
 
-.carte-le-soleil-du-matin{
-    width: 90%; /*prend 90% de la largeur*/
+/*.carte-le-soleil-du-matin{
+    width: 90%; /*prend 90% de la largeur
     margin-bottom: 1rem;
     background-color: white;
     border-radius: 25px;
     border: 0.2rem solid white;
     box-shadow: 0 0 10px 0 rgb(0 0 0 / 10%);   
-}
+}*/
 
 
 .bloc-img-le-soleil-du-matin{
@@ -580,14 +614,14 @@ div img{
 
 
 
-.carte-au-coeur-de-leau{
+/*.carte-au-coeur-de-leau{
     width: 90%;
     margin-bottom: 1rem;
     background-color: white;
     border-radius: 25px;
     border: 0.2rem solid white;
     box-shadow: 0 0 10px 0 rgb(0 0 0 / 10%);
-}
+}*/
 
 .bloc-img-au-coeur-de-leau{
     width: 100%;  /*largeur différente des aurtres car mauvais alignement*/
@@ -598,14 +632,14 @@ div img{
   
 
 
-.carte-tout-bleu-et-blanc{
+/*.carte-tout-bleu-et-blanc{
     width: 90%;
     margin-bottom: 1rem;
     background-color: white;
     border-radius: 25px;
     border: 0.2rem solid white;
     box-shadow: 0 0 10px 0 rgb(0 0 0 / 10%);
-}
+}*/
 
 
 .bloc-img-tout-bleu-et-blanc{
@@ -620,6 +654,7 @@ border-radius: 25px;
     
 }    
 }
+
 
   @media screen and (max-width:950px) /*(max-width:1050px)*/{  
     .hebergements-populaires{
@@ -676,11 +711,11 @@ border-radius: 25px;
              width: 60%;
     }
    
-    .carte-le-soleil-du-matin{
-        width: 85vw;    /*carte prend 85% largeur du viewport*/
+    /*.carte-le-soleil-du-matin{
+        width: 85vw;    /*carte prend 85% largeur du viewport
         background-color: white; 
         border-radius: 25px;
-    }
+    }*/
 
     .bloc-img-le-soleil-du-matin{
         width: 67%;
@@ -691,13 +726,13 @@ border-radius: 25px;
     }
 
    
-.carte-au-coeur-de-leau{
-    width: 85vw;    /*carte prend 85% largeur du viewport*/
+/*.carte-au-coeur-de-leau{
+    width: 85vw;    /*carte prend 85% largeur du viewport
     background-color: white; 
     border-radius: 25px;
       
     
-}
+}*/
 
 .bloc-img-au-coeur-de-leau{
     width: 67%;
@@ -705,14 +740,14 @@ border-radius: 25px;
     display: flex; 
     border: 0.2rem solid white;
 }
-.carte-tout-bleu-et-blanc{
-    width: 85vw;    /*carte prend 85% largeur du viewport*/
+/*.carte-tout-bleu-et-blanc{
+    width: 85vw;    /*carte prend 85% largeur du viewport
     background-color: white; 
     border-radius: 25px;
       
       
     
-}
+}*/
 
 .bloc-img-tout-bleu-et-blanc{
     width: 67%;
@@ -859,7 +894,7 @@ border-radius: 25px;
         height: 6rem;
     }
 
-    @media screen and (min-width:1050px){
+    @media screen and (min-width:1100px){
         .carte-Auberge-La-Cannebiere{
             height:7rem;
         }

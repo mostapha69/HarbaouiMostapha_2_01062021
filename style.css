@@ -46,6 +46,7 @@ header div img{
 a /*liens par défauts non survolés*/
 {
     text-decoration:none;
+    color: black;
 }
 
 #inscrire{
@@ -100,7 +101,7 @@ a:hover /*liens au survol*/
 {
     text-decoration:none;
     width:50vw;
-
+    color: black;
 }
 
 a:hover{
@@ -150,7 +151,7 @@ h1 + div{    /*selectionne la div qui vient juste après le h1*/
     margin-right: 0rem;
     border-radius: 10px;
     background-color: #F2F2F2;   /*le background de l'icône "map"*/
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     max-width: 218px;
 
 }
@@ -364,26 +365,37 @@ h1 + div{    /*selectionne la div qui vient juste après le h1*/
     
 }
 
-#icone-info{
-    margin-right: 5px;
-    border: 0.1rem solid #F2F2F2;
-    border-radius: 50%;
-    margin-top:-6px;
-}
 
 .fa-info{
+    border: 0.1rem solid #F2F2F2;
+    border-radius: 50%;
+    padding: 5px;
     color: #0065FC;
-    margin:5px;  /*écart entre icône et bordure*/
+    margin-top: -5px;
+    margin-right: 5px;
 }
+
 
 
 /*SECTION "HEBERGEMENTS" ET SECTION "LES PLUS POPULAIRES"*/
 
+
+/* .liens-images{
+    text-decoration: none;
+    color:none;
+} */
+
+.liens-images:hover{
+    text-decoration: none;
+    color: black;
+    font-weight: normal ;
+}
 .hebergements-populaires{      /*sections "populaires" et "logements à marseille"*/
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
 }
+
 
 .fa-star {
     font-size: small;
@@ -430,9 +442,7 @@ div img{
     margin-bottom: 2rem;
     max-width: 860px;
     border-radius: 0 25px 25px 0;
-    
-    
-    
+       
 }
 
 .section-populaires /*section LES PLUS POPULAIRES titre h2 compris */
@@ -522,6 +532,10 @@ div img{
     cursor: pointer;
 } 
 
+#hebergements{
+    margin-bottom: 1.5rem;
+}
+
 
 
 
@@ -572,14 +586,20 @@ div img{
     margin-left: 1rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;  /*espacer le texte de chaque carte dans la  section "les plus populaires en desktop */
+    justify-content: space-between;  /*espacer le texte de chaque carte dans la  section "les plus populaires en desktop */
     width: 100%;
+    margin-top: 1rem;
+    margin-bottom:0.5rem;
+}
+
+.item2{
+    margin-bottom: 0.7rem;
 }
 
 
 
 .titre-populaire{
-    margin-bottom: 1rem; /*marge sous le titre h2*/
+    margin-bottom: 1.5rem; /*marge sous le titre h2*/
 }
 
 
@@ -593,6 +613,13 @@ div img{
     margin-bottom: 0.2rem;
 }
 
+.petit-titre-hotel-tout-bleu-et-blanc{
+    margin-bottom: 0.7rem;
+}
+
+.petit-titre-hotel-le-soleil-du-matin{
+    margin-bottom: 0.7rem;
+}
 .prix{
     margin-bottom: 0.2rem;
 }
@@ -658,6 +685,15 @@ border-radius: 25px;
 }    
 }
 
+@media screen and (min-width:500px) and (max-width:950px){    
+        .logements-populaires{
+            display: flex;
+            flex-direction: column;
+            background-color: #F2F2F2;
+             flex-wrap: wrap; 
+            align-items: center;
+         } 
+    }
 
   @media screen and (max-width:950px) /*(max-width:1050px)*/{  
     .hebergements-populaires{
@@ -675,13 +711,7 @@ border-radius: 25px;
     }
 
 
-   .logements-populaires{
-       display: flex;
-       flex-direction: column;
-       background-color: #F2F2F2;
-        flex-wrap: wrap; 
-       
-    } 
+   
 
     
 
@@ -762,7 +792,7 @@ border-radius: 25px;
 
 /*cartes images de la section hébergements*/
 .carte-Auberge-La-Cannebiere{
-    width: 14rem;
+    width: 16rem;
     /* height: 6rem; */
     margin-bottom: 1rem;
     margin-right: 0rem;
@@ -784,7 +814,7 @@ border-radius: 25px;
 
 
     .carte-Hotel-du-port{
-            width: 14rem;
+            width: 16rem;
             /* height: 6rem; */
             margin-bottom: 1rem;
         }
@@ -807,7 +837,7 @@ border-radius: 25px;
     }
 
     .carte-Hotel-Les-mouettes{
-        width: 14rem;
+        width: 16rem;
             /* height: 6rem; */
         margin-bottom: 1rem;
         
@@ -828,7 +858,7 @@ border-radius: 25px;
         height: 6rem;
     }
     .carte-Hotel-de-la-mer{
-        width: 14rem;
+        width: 16rem;
         /* height: 6rem; */
         margin-bottom: 1rem;
     }
@@ -851,7 +881,7 @@ border-radius: 25px;
     }
     
     .carte-Auberge-Le-Panier{
-        width: 14rem;
+        width: 16rem;
         /* height: 6rem; */
         margin-bottom: 1rem;
     }
@@ -875,7 +905,7 @@ border-radius: 25px;
     }
     
     .carte-Hotel-chez-Amina{
-        width: 14rem;
+        width: 16rem;
             /* height: 6rem; */
             margin-bottom: 1rem;
     }
@@ -897,9 +927,10 @@ border-radius: 25px;
         height: 6rem;
     }
 
-    @media screen and (min-width:1100px){
+    @media screen and (min-width:1215px){
         .carte-Auberge-La-Cannebiere{
             height:7rem;
+            width: 14rem;
         }
         
         .carte-Hotel-du-port{
@@ -908,16 +939,20 @@ border-radius: 25px;
 
         .carte-Hotel-Les-mouettes{
             height:7rem;
+            width: 14rem;
         }
         .carte-Hotel-de-la-mer{
             height:7rem;
+            width: 14rem;
             margin-top: 7rem;
         }
         .carte-Auberge-Le-Panier{
             height:7rem;
+            width: 14rem;
             margin-top:7rem;
         }
         .carte-Hotel-chez-Amina{
+            width: 14rem;
             height:7rem;
             margin-top: 7rem;
         }
@@ -1106,7 +1141,8 @@ border-radius: 25px;
     border: none;
     background-color: none;
     position: absolute;
-    bottom: 0.5rem;  /*bien aligné en absolute*/   
+    bottom: 1.5rem;  /*bien aligné en absolute*/ 
+    left: 1rem;  
 }
 
 #afficher-plus:hover{
@@ -1114,14 +1150,20 @@ border-radius: 25px;
     cursor: pointer;
 }
 
+@media screen and (min-width:951px) and (max-width:1215px){
+    #afficher-plus{
+        bottom: 0.5rem;
+}
+}
 
 @media screen and (max-width:950px) {
     #afficher-plus{    /*placer "Afficher plus" à gauche*/
         background-color: white;
-        margin-top: 1rem;
-        margin-bottom: 2rem;
+        margin-top: 2rem;
+        /* margin-bottom: 2rem; */
         position: relative;
-        margin-left: 26px;
+        margin-left: 10px;
+        /* bottom:0.5rem; */
         
     }
 }
@@ -1139,6 +1181,12 @@ border-radius: 25px;
     font-size: 1rem;
     margin-top: 2rem;
     
+}
+
+.liens-images-activites:hover{
+    text-decoration: none;
+    color: black;
+    font-weight:bold;
 }
 
 .carte{
@@ -1398,6 +1446,7 @@ footer{
     background-color: #F2F2F2;
     margin-left: -1rem; 
     margin-right:-1rem;
+    padding-left: 1rem;
 }
 
 .liste{

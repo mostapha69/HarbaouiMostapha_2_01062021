@@ -498,6 +498,7 @@ div img{
     width: 100%;
     flex-wrap: wrap;
     margin: auto;
+    margin-left: 1rem;
 }
 
 /* .logementsmarseille div img{
@@ -534,6 +535,7 @@ div img{
 
 #hebergements{
     margin-bottom: 1.5rem;
+    margin-left:2rem;
 }
 
 
@@ -604,7 +606,7 @@ div img{
 
 
 .zone-texte{
-    margin-left: 0.4rem; /*Marge gauche texte des  carte hébergements à marseille*/
+    margin-left: 0.7rem; /*Marge gauche texte des  carte hébergements à marseille*/
     
 }
 
@@ -706,7 +708,7 @@ border-radius: 25px;
         display: flex;
         flex-direction: column;
         align-items: center;
-    
+        margin-left: 0rem;  /*pour éviter le décalage en mode iphone*/
         
     }
 

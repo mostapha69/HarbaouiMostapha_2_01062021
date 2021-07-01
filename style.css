@@ -930,29 +930,30 @@ border-radius: 25px;
     @media screen and (min-width:1215px){
         .carte-Auberge-La-Cannebiere{
             height:7rem;
-            width: 14rem;
+            width: 16rem;
         }
         
         .carte-Hotel-du-port{
             height:7rem;
+            width: 16rem;
         }
 
         .carte-Hotel-Les-mouettes{
             height:7rem;
-            width: 14rem;
+            width: 16rem;
         }
         .carte-Hotel-de-la-mer{
             height:7rem;
-            width: 14rem;
+            width: 16rem;
             margin-top: 7rem;
         }
         .carte-Auberge-Le-Panier{
             height:7rem;
-            width: 14rem;
+            width: 16rem;
             margin-top:7rem;
         }
         .carte-Hotel-chez-Amina{
-            width: 14rem;
+            width: 16rem;
             height:7rem;
             margin-top: 7rem;
         }

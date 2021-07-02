@@ -173,6 +173,7 @@ h1 + div{    /*selectionne la div qui vient juste après le h1*/
     border: 1px solid #F2F2F2;
     border-radius: 0px 25px 25px 0px;  /*bordures arrondies seulement à droite*/
     font-size: 1.2rem;
+    cursor: pointer;
 }
 
 #loupe{
@@ -380,10 +381,11 @@ h1 + div{    /*selectionne la div qui vient juste après le h1*/
 /*SECTION "HEBERGEMENTS" ET SECTION "LES PLUS POPULAIRES"*/
 
 
-/* .liens-images{
+.liens-images{
     text-decoration: none;
     color:none;
-} */
+    display:contents;
+}
 
 .liens-images:hover{
     text-decoration: none;
@@ -1184,6 +1186,10 @@ border-radius: 25px;
     font-size: 1rem;
     margin-top: 2rem;
     
+}
+
+.liens-images-activites{
+    display: contents;
 }
 
 .liens-images-activites:hover{

@@ -2,7 +2,7 @@ body{
     
     font-family: 'raleway', sans-serif;
     max-width: 1310px;
-    /* margin:auto; */
+    margin:auto;
     margin:1rem;
     }
 
@@ -1479,6 +1479,9 @@ footer{
        padding-left: 1rem;    
    } 
     
+   .liste{
+       margin-right: 0rem;
+   }
 }
 
 

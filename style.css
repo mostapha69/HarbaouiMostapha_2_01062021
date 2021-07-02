@@ -2,9 +2,15 @@ body{
     
     font-family: 'raleway', sans-serif;
     max-width: 1310px;
-    margin:auto;
-    margin:1rem;
+    margin: 1rem 1rem 0rem 1rem;
     }
+
+@media screen and (min-width:1310px){
+
+    body{
+        margin:auto;
+    }
+}
 
 
 
@@ -13,7 +19,7 @@ nav{
     display: flex;
     justify-content: flex-end;   /*mettre tout le header à droite*/
     height: 4rem;
-    padding: 0 1rem O 1rem;
+    padding: 0 1rem 0 1rem;
     position: relative;
     margin-bottom: 1rem;
     
@@ -383,7 +389,6 @@ h1 + div{    /*selectionne la div qui vient juste après le h1*/
 
 .liens-images{
     text-decoration: none;
-    color:none;
     display:contents;
 }
 
@@ -508,25 +513,27 @@ div img{
     height: 9rem;
 }    */
 
- /* /* @media screen and (min-width: 1400px){ 
+ /*@media screen and (min-width: 1400px){ 
     .logementsmarseille{ 
-        width:80%;      /* réduire largeur de la section pour avoir 3 images alignées sur la même ligne
+        width:100%;      /* réduire largeur de la section pour avoir 3 images alignées sur la même ligne
         
-     }   */
+     }   
     
- /* }
- @media screen and (min-width: 1790px){ 
+  }*/
+ /*@media screen and (min-width: 1590px){ 
     .logementsmarseille{ 
-        width:70%;  /*pour avoir 3 images alignées sur la même ligne
+        width:90%;  /*pour avoir 3 images alignées sur la même ligne
+        display: flex;
+        justify-content: space-around;
     }
-}    */
+}   */
 
 
-/* @media screen and (min-width: 2020px){ 
+/*@media screen and (min-width: 2020px){ 
     .logementsmarseille{ 
         width:55%;  /*pour avoir 3 images alignées sur la même ligne
     }
-}   */ 
+}*/   
 
 
 .agencement{    /*class chaque carte "Hebergements à Marseille"*/
@@ -699,6 +706,7 @@ border-radius: 25px;
          } 
     }
 
+
   @media screen and (max-width:950px) /*(max-width:1050px)*/{  
     .hebergements-populaires{
         display: flex;
@@ -708,7 +716,7 @@ border-radius: 25px;
 
     .logementsmarseille{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         margin-left: 0rem;  /*pour éviter le décalage en mode iphone*/
         
@@ -992,14 +1000,14 @@ border-radius: 25px;
 
 
 /*cartes images de la section hébergements @media screen and (max-width:950px)*/
- @media screen and (max-width:950px){ 
+ @media screen and (max-width:950px) and (min-width:680px) { 
 
 .agencement{
     margin-left: 29px;
 }
 
 .carte-Auberge-La-Cannebiere{
-    width: 350px;
+    width: 310px;
     display: flex;
     /* min-height: 16rem; */
     justify-content: center;
@@ -1022,7 +1030,7 @@ border-radius: 25px;
 }
 
 .carte-Hotel-du-port{
-    width: 350px;
+    width: 310px;
     display: flex;
     /* min-height: 16rem; */
     justify-content: center;
@@ -1044,7 +1052,7 @@ border-radius: 25px;
 }
 
 .carte-Hotel-Les-mouettes{
-    width: 350px;
+    width: 310px;
     display: flex;
     /* min-height: 16rem; */
     justify-content: center;
@@ -1065,7 +1073,7 @@ border-radius: 25px;
 }
 
 .carte-Hotel-de-la-mer{
-    width: 350px;
+    width: 310px;
     display: flex;
     /* min-height: 16rem; */
     justify-content: center;
@@ -1086,7 +1094,7 @@ border-radius: 25px;
 }
 
 .carte-Auberge-Le-Panier{
-    width: 350px;
+    width: 310px;
     display: flex;
     /* min-height: 16rem; */
     justify-content: center;
@@ -1109,7 +1117,7 @@ border-radius: 25px;
 }
 
 .carte-Hotel-chez-Amina{
-    width: 350px;
+    width: 310px;
     display: flex;
     /* min-height: 16rem; */
     justify-content: center;
@@ -1134,6 +1142,156 @@ border-radius: 25px;
 
 
 
+@media screen and (max-width:680px){ 
+
+
+    .logementsmarseille{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0rem;  /*pour éviter le décalage en mode iphone*/
+        
+    }
+    .agencement{
+        margin-left: 29px;
+    }
+    
+    .carte-Auberge-La-Cannebiere{
+        width: 350px;
+        display: flex;
+        /* min-height: 16rem; */
+        justify-content: center;
+        height: 13rem;
+        
+    }
+    
+    
+    .bloc-img-Auberge-La-Cannebiere{
+        overflow: hidden;
+        background-color:white;
+        border-radius: 25px;
+        box-shadow: 0rem 0.2rem 0rem 0rem #F2F2F2;  /*ombre seulement en bas de l'image*/
+        width: 100%;
+    }
+    
+    .img-Auberge-La-Cannebiere{
+        width: 100%;
+        height: 8rem;
+    }
+    
+    .carte-Hotel-du-port{
+        width: 350px;
+        display: flex;
+        /* min-height: 16rem; */
+        justify-content: center;
+        height: 13rem;
+        
+    }
+    
+    
+    .bloc-img-Hotel-du-port{
+        overflow: hidden;
+        background-color:white;
+        border-radius: 25px;
+        box-shadow: 0rem 0.2rem 0rem 0rem #F2F2F2;
+        width: 100%;
+    }
+    .img-Hotel-du-port{
+        width: 100%;
+        height: 8rem;
+    }
+    
+    .carte-Hotel-Les-mouettes{
+        width: 350px;
+        display: flex;
+        /* min-height: 16rem; */
+        justify-content: center;
+        height: 13rem;
+    }
+    
+    .bloc-img-Hotel-Les-mouettes{
+        overflow: hidden;
+        background-color:white;
+        border-radius: 25px;
+        box-shadow: 0rem 0.2rem 0rem 0rem #F2F2F2;
+        width: 100%;
+    }
+    
+    .img-Hotel-Les-mouettes{
+        width: 100%;
+        height: 8rem;
+    }
+    
+    .carte-Hotel-de-la-mer{
+        width: 350px;
+        display: flex;
+        /* min-height: 16rem; */
+        justify-content: center;
+        height: 13rem;
+    }
+    
+    .bloc-img-Hotel-de-la-mer{
+        overflow: hidden;
+        background-color:white;
+        border-radius: 25px;
+        box-shadow: 0rem 0.2rem 0rem 0rem #F2F2F2;
+        width: 100%;
+    }
+    
+    .img-Hotel-de-la-mer{
+        width: 100%;
+        height: 8rem;
+    }
+    
+    .carte-Auberge-Le-Panier{
+        width: 350px;
+        display: flex;
+        /* min-height: 16rem; */
+        justify-content: center;
+        height: 13rem;
+    }
+    
+    
+    
+    .bloc-img-carte-Auberge-Le-Panier{
+        overflow: hidden;
+        background-color:white;
+        border-radius: 25px;
+        box-shadow: 0rem 0.2rem 0rem 0rem #F2F2F2;
+        width: 100%;
+    }
+    
+    .img-carte-Auberge-Le-Panier{
+        width: 100%;
+        height: 8rem;
+    }
+    
+    .carte-Hotel-chez-Amina{
+        width: 350px;
+        display: flex;
+        /* min-height: 16rem; */
+        justify-content: center;
+        height: 13rem;
+    }
+    
+    
+    .bloc-img-Hotel-chez-Amina{
+        overflow: hidden;
+        background-color:white;
+        border-radius: 25px;
+        box-shadow: 0rem 0.2rem 0rem 0rem #F2F2F2;
+        width: 100%;
+    }
+    
+    
+    .img-Hotel-chez-Amina{
+        width: 100%;
+        height: 8rem;
+    }
+    }
+
+
+
 /*bouton "AFFICHER PLUS*/
 
 .section-hebergements{
@@ -1144,7 +1302,6 @@ border-radius: 25px;
     font-size: 1.2rem;
     font-weight: bold;
     border: none;
-    background-color: none;
     position: absolute;
     bottom: 1.5rem;  /*bien aligné en absolute*/ 
     left: 1rem;  
@@ -1359,19 +1516,23 @@ border-radius: 25px;
 }
 
 /* MEDIA SCREEN SECTION ACTIVITES */
-@media screen and (min-width:760px) and (max-width:1119px){
+@media screen and (min-width:900px) and (max-width:1119px){
     .Notre-dame-parc-longchamp{     /*pour que les 2 cartes se retrouvent alignés à l'horizontal*/
         display: flex;
         margin-top: 2rem;
         flex-wrap: wrap;
+        /* justify-content: space-around; */
+        /* align-self: center; */
+        
     }
     .carte-Notre-Dame-de-la-Garde{
-        margin-right:4rem;
+        margin-right:10rem;
+        margin-left: 7rem;
     }
 }
 
 
-@media screen and (max-width:760px) {  /*(max-width:1050px)*/         /*pour la section "ACTIVITES"*/
+@media screen and (max-width:900px) and (min-width:680px) {  /*(max-width:1050px)*/         /*pour la section "ACTIVITES"*/
     .activites-a-marseille{
         text-align: left;
         /* margin: auto; */ 
@@ -1386,7 +1547,71 @@ border-radius: 25px;
 
     .carte{     /*class pour toutes les cartes Section Activités*/
         margin: auto;
-        width: 345px;
+        width: 450px;
+        height: 13rem;
+        margin-bottom: 1rem;
+    }
+
+    .texte-carte{
+        padding-top: 1.2rem;
+        padding-left: 1rem;
+    }
+
+    .bloc {     /*class pour tous les blocs-img de toutes les cartes*/
+        height: 70%;   /*l'image prend 70% de la carte*/
+        width: 100%;
+        overflow: hidden;  /*pour rogner une partie de l'image et y placer ensuite mon texte*/
+    }
+
+    .img-vieux-port{
+        width: 100%;
+        height: 10rem;
+    }
+
+
+    .img-Parc-National-des-Calanques{
+        width: 100%;
+        height: 10rem;
+    }
+
+    .img-Parc-Longchamp{
+        width: 100%;
+        height: 10rem;
+    }
+
+    .img-Notre-Dame-de-la-Garde{
+        width: 100%;
+        height: 10rem; 
+    }
+
+    
+    .img-iles-du-frioul{
+        width: 100%;
+        height: 10rem;
+    }
+
+    .img-Fort-de-Pomegues{
+        width: 100%;
+        height: 10rem; 
+    }
+}
+
+@media screen and (max-width:680px){
+    .activites-a-marseille{
+        text-align: left;
+        /* margin: auto; */ 
+        font-size: 1.1rem;      
+  }
+ 
+    .loisirs-a-marseille{
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .carte{     /*class pour toutes les cartes Section Activités*/
+        margin: auto;
+        width: 350px;
         height: 13rem;
         margin-bottom: 1rem;
     }

@@ -81,8 +81,8 @@ a:hover /*liens au survol*/
     {
         align-self: flex-end; /*Passer les menus "Hebergements" et "Activités" a la ligne en-dessous de 760px*/
         border-bottom: 0.2rem solid rgb(228, 220, 220);
-        margin-right: -1rem;
-        margin-left:-1rem;
+        margin-right: -2rem;
+        margin-left:-2rem;
     }
 
     .hebergements{

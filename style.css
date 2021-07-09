@@ -12,8 +12,6 @@ body{
     }
 }
 
-
-
 /*HEADER*/
 nav{
     display: flex;
@@ -23,10 +21,13 @@ nav{
     position: relative;
     margin-bottom: 1rem;
     
+    
+    
 }
 
 .hebergements{
     margin-right: 1rem;
+     
    
 }
 
@@ -49,22 +50,38 @@ header div img{
     
 }
 
+.menu{
+    border-top:0.2rem solid transparent;
+    padding-top: 13px;
+    margin-top: -16px;
+}
+
+
 a /*liens par défauts non survolés*/
 {
     text-decoration:none;
     color: black;
+    
 }
 
 #inscrire{
     color:#0065FC;
 }
 
-
 a:hover /*liens au survol*/
 {
-    text-decoration: overline;
+    text-decoration: none;
     color: #0065FC;
     font-weight: bold;
+    margin-top: 0.2rem;
+      
+}
+
+.menu:hover{
+    text-decoration: none; 
+    color: #0065FC;
+    font-weight: bold;
+    border-color: #0065FC;
 }
 
 /*MEDIA SCREEN HEADER*/
@@ -83,6 +100,7 @@ a:hover /*liens au survol*/
         border-bottom: 0.2rem solid rgb(228, 220, 220);
         margin-right: -2rem;
         margin-left:-2rem;
+        border-top: none;
     }
 
     .hebergements{
@@ -241,9 +259,6 @@ h1 + div{    /*selectionne la div qui vient juste après le h1*/
     width: 70%;  /*70% de la largeur*/
     font-weight: bold;
     font-size: 1rem;
-
-    
-
 }
 
 
@@ -1342,7 +1357,6 @@ border-radius: 25px;
     font-weight: bold;
     font-size: 1rem;
     margin-top: 2rem;
-    
 }
 
 .liens-images-activites{
@@ -1707,6 +1721,7 @@ footer{
    .liste{
        margin-right: 0rem;
    }
+
 }
 
 

@@ -117,7 +117,7 @@ a:hover /*liens au survol*/
 
     .inscriptions{
         position: absolute;  /*position en absolute de "s'inscrire" à droite*/
-        /* right: 0.9rem; */
+        right: 0rem;
     }
 
     a /*liens par défauts non survolés*/

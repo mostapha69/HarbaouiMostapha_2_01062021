@@ -77,11 +77,8 @@ a:hover /*liens au survol*/
 }
 
 .menu:hover{
-    color: #0065FC;
-    font-weight: bold;
     border-color: #0065FC;
-    
-    
+       
 }
 
 /*MEDIA SCREEN HEADER*/
@@ -137,10 +134,7 @@ a:hover{
 
 .menu:hover /*liens au survol*/
 {
-    /* text-decoration: none;  */
-    color: #0065FC;
     border-color: #0065FC;
-    
 
 }
 }    

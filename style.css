@@ -101,6 +101,8 @@ a:hover /*liens au survol*/
         margin-right: -2rem;
         margin-left:-2rem;
         border-top: none;
+        padding-bottom: 7px;
+        margin-bottom: -10px;
     }
 
     .hebergements{
